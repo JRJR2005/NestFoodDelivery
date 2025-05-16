@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ta">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ணெஸ்ட் ஃபூட் டெலிவரி</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .header {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            position: sticky;
+            top: 0px;
+        }
+
+        .card2 {
+            max-width: 1000px;
+            margin: auto;
+            margin-top: 20px;
+            padding: 20px;
+            box-shadow: 2px 2px 5px black;
+            border-radius: 10px;
+        }
+
+        .card {
+            width: 97%;
+            padding: 15px;
+            box-shadow: 2px 2px 5px black;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        h4 {
+            text-align: center;
+            font-size: 20px;
+            color: darkgreen;
+            text-transform: uppercase;
+        }
+
+        .input {
+            width: 97%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 2px solid darkblue;
+            font-size: 16px;
+            height: 100px;
+        }
+        .input:focus{
+            box-shadow: 2px 2px 5px black;
+        }
+        .faq-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        .faq-grid button {
+            flex: 1 1 calc(50% - 10px);
+            min-width: 45%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: white;
+            border: 2px solid darkblue;
+            border-radius: 7px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .faq-grid button:hover {
+            box-shadow: 2px 2px 5px black;
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding: 20px 10px;
+            background-color: #f5f5f5;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        .link {
+            font-size: 16px;
+            text-decoration: none;
+            color: black;
+            padding: 5px 10px;
+        }
+
+        .link:hover {
+            box-shadow: 1px 1px 5px black;
+            border-radius: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body id="home">
+
+    <div class="card2">
+        <h4>அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQ)</h4>
+        <div class="card">
+            <textarea type="text" placeholder="கேள்விகளை இங்கே எழுதுங்கள்..." class="input" id="textareas"></textarea>
+            <div class="faq-grid">
+                <button onclick="que1()">ணெஸ்ட் ஃபூட் டெலிவரி என்ன சேவைகளை வழங்குகிறது?</button>
+                <button onclick="que2()">சேவை எங்கு கிடைக்கிறது?</button>
+                <button onclick="que3()">ஆர்டர் எப்படி செய்வது?</button>
+                <button onclick="que4()">மாத சந்தாவிற்கு எப்படி பதிவு செய்வது?</button>
+                <button onclick="que5()">விநியோக நேரம் என்ன?</button>
+                <button onclick="que6()">ஆர்டரை ரத்து செய்ய முடியுமா?</button>
+                <button onclick="que7()">என் தகவல்கள் பாதுகாப்பானதா?</button>
+                <button onclick="que8()">வாடிக்கையாளர் சேவையை எப்படிச் தொடர்புகொள்வது?</button>
+                <button onclick="que9()">விநியோகத்தில் தாமதம் ஏற்பட்டால் என்ன?</button>
+                <button onclick="que10()">புதிய இடங்களைச் சேர்க்கலாம் என்று பரிந்துரை செய்ய முடியுமா?</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p style="text-align: center; border-radius: 10px; padding: 10px; background-color: #f5f5f5; font-weight: bold;">
+            © 2025 ணெஸ்ட் ஃபூட் டெலிவரி. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.
+        </p>
+
+        <!-- Social Icons -->
+        <div style="display: flex; justify-content: center; gap: 20px; padding: 10px;">
+            <a href="https://facebook.com/yourpage" target="_blank" class="link" title="Facebook">
+                <img src="https://i.pinimg.com/736x/42/75/49/427549f6f22470ff93ca714479d180c2.jpg" class="icon"
+                    alt="Facebook">
+            </a>
+            <a href="https://instagram.com/yourpage" target="_blank" class="link" title="Instagram">
+                <img src="https://png.pngtree.com/png-clipart/20180626/ourmid/pngtree-instagram-icon-instagram-logo-png-image_3584852.png"
+                    class="icon" alt="Instagram">
+            </a>
+            <a href="https://wa.me/9159158227" target="_blank" class="link" title="WhatsApp">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/029/204/552/small_2x/phone-icon-3d-rendering-png.png"
+                    class="icon" alt="WhatsApp">
+            </a>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="footer-links">
+            <a href="B:/Nest Food Delivery/tm_terms.html" class="link">விதிமுறைகள்</a> |
+            <a href="B:/Nest Food Delivery/tm_privacy.html" class="link">தனியுரிமைக் கொள்கை</a> |
+            <a href="B:/Nest Food Delivery/tamil.html" class="link">முதன்மை பக்கம்</a>
+        </div>
+    </div>
+
+    <script>
+        function que1(){
+            document.getElementById("textareas").innerHTML="நாங்கள் இரண்டு முக்கிய சேவைகளை வழங்குகிறோம்:\n📦 ஹோட்டலிலிருந்து வீட்டுக்கு உணவு விநியோகம்.\n🏠 வீட்டிலிருந்து நிறுவனங்களுக்கு மாத சந்தா உணவு விநியோகம்.";
+        }
+        function que2(){
+            document.getElementById("textareas").innerHTML="நாங்கள் தற்போது நாகர்கோவிலில் செயல்படுகிறோம். எதிர்காலத்தில் தேவை ஏற்படின் மற்ற இடங்களும் சேர்க்கப்படும்.";
+        }
+        function que3(){
+            document.getElementById("textareas").innerHTML="ஹோட்டலிலிருந்து வீட்டு ஆர்டர்கள் செயலியை பயன்படுத்தி செய்யலாம். வீட்டிலிருந்து நிறுவனத்திற்கு ஆர்டருக்கு மாத சந்தா தேவைப்படும்.";
+        }
+        function que4(){
+            document.getElementById("textareas").innerHTML="பிளே ஸ்டோரிலிருந்து எங்கள் செயலியை பதிவிறக்கம் செய்து, உங்களுக்கு பொருத்தமான மாத சந்தா திட்டத்தைத் தேர்வு செய்யுங்கள். நேர அட்டவணை மற்றும் சேகரிப்பு விவரங்கள் மின்னஞ்சலில் அனுப்பப்படும்.";
+        }
+        function que5(){
+            document.getElementById("textareas").innerHTML="⏰ ஹோட்டல்-வீடு – ஹோட்டலின் தயாரிப்பு நேரம் மற்றும் தொலைவின் அடிப்படையில்.\n⏰ வீடு-நிறுவனம் – முன்பே திட்டமிடப்பட்ட நிலையான நேரத்தில் விநியோகம் செய்யப்படும்.";
+        }
+        function que6(){
+            document.getElementById("textareas").innerHTML="ஆம். ஹோட்டல்-வீட்டு ஆர்டர்கள் 5 நிமிடங்களில் ரத்து செய்ய வேண்டும். சந்தா சேவைகளை மாற்ற 24 மணி நேரம் முன்கூட்டியே தெரிவிக்க வேண்டும்.";
+        }
+        function que7(){
+            document.getElementById("textareas").innerHTML="ஆம். உங்கள் தகவல்களை நாங்கள் பாதுகாப்பாகச் சேமித்து, எங்கள் சேவையை மேம்படுத்த மட்டுமே பயன்படுத்துகிறோம். மேலும் விவரங்களுக்கு, தனியுரிமைக் கொள்கையைப் படிக்கவும்.";
+        }
+        function que8(){
+            document.getElementById("textareas").innerHTML="நீங்கள் எங்களைத் தொடர்புகொள்ளலாம்:\n📧 மின்னஞ்சல்: nestrajiv6@gmail.com\n📞 தொலைபேசி/வாட்ஸ்அப்: +91-91591-58200";
+        }
+        function que9(){
+            document.getElementById("textareas").innerHTML="நாங்கள் நேரத்துக்கு உணவுகளை விநியோகிக்க முயற்சிக்கிறோம். நேரடி அப்டேட்கள் வழங்கப்படும். தாமதமென்றால் எங்களைத் தொடர்புகொள்ளவும்.";
+        }
+        function que10(){
+            document.getElementById("textareas").innerHTML="ஆம்! உங்கள் பகுதியைச் சேர்க்க பரிந்துரை செய்யலாம். தேவையானவை நிறைய இருந்தால், அந்த இடத்தை சேவையில் சேர்க்க பரிசீலிக்கப்படும்.";
+        }
+    </script>
+</body>
+
+</html>
