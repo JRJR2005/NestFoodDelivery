@@ -2,6 +2,11 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Nest Food Delivery - Care in Every Delivery">
+        <meta name="keywords" content="food delivery, food delivery at Nagercoil, breakfast, lunch, dinner, home to institute delivery, hotel to home delivery, Nest Lunch Delivery, school lunch delivery">
+        <meta name="author" content="Nest Food Delivery - JRJR">
+        <meta property="og:title" content="Nest Food Delivery">
+        <meta property="og:description" content="Care in Every Delivery - Fast, reliable breakfast, lunch and dinner delivery service.">
         <title>Nest Food Delivery</title>
     </head>
     <style>
@@ -12,11 +17,12 @@
             scroll-behavior: smooth;
         }
         .banner{
-            background-image: url("https://www.kitchenking.in/wp-content/uploads/2021/08/Signoraware-Best-Steel-Innovative-Lunch-Box.png");
+            background-image: url("./banner.png");
             background-position: center;
             background-size: cover;
             width: 100%;
-            height: 90%;
+            height: 100%;
+            max-height: 150%;
             border-radius: 10px;
             align-items: center;
             align-content: center;
@@ -49,32 +55,6 @@
         }
         .body{
             padding: 5px;
-        }
-        .button{
-            width: 20%;
-            font-size: 16px;
-            background-color: white;
-            border-radius: 10px;
-            padding: 3px;
-            font-weight: bold;
-            color: darkblue;
-            border-color: darkblue;
-            border-width: medium;
-            border-style: outset;
-            text-align: center;
-            font-size: 18px;
-        }
-        .button:hover{
-            box-shadow: 2px 2px 5px black;
-        }
-        .menu{
-            display: flex;
-            flex-direction: row;    
-            justify-content: space-evenly;
-            align-content: space-between;
-            align-items: center;
-            width: 60%;
-            margin-right: 5px;
         }
         .container {
             width: 58%;
@@ -180,6 +160,78 @@
             font-size: 18px;
             text-transform: uppercase;
         }
+        .drawerIcon{
+                width: 60px;
+                height: 60px;
+                border-radius: 50px;
+                margin-right: 20px;
+                visibility: visible;
+                transition: width 1s, height 1s;
+        }
+        .drawerIcon:hover{
+            box-shadow: 2px 2px 8px black;
+            visibility: visible;
+        }
+        .drawerContainer{
+            display: flex;
+            justify-content: flex-end;
+            visibility: hidden;
+        }
+        .drawerHeader{
+            background-color: white;
+            width: 96%;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px black;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .menu{
+            position: absolute;
+            backface-visibility: hidden;
+            right: 5px;
+            top: 100px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;    
+            margin: 10px;
+            align-items: center;
+            width: 30%;
+            background-color: rgba(255, 255, 255, 0.527);
+            box-shadow: 2px 2px 10px black;
+            border-radius: 10px;
+        }
+        .dev{
+            background-color: white;
+            width: 96%;
+            padding: 5px;
+            border-radius: 10px;
+            border-width: thin;
+            border-style: ridge;
+        }
+        .devinfo{
+                color: darkblue;
+                font-size: 14px;
+        }
+        .button{
+            width: 90%;
+            font-size: 16px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 5px;
+            font-weight: bold;
+            color: darkblue;
+            border-color: darkblue;
+            border-bottom: 2px solid black;
+            margin-bottom: 2px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .button:hover{
+            box-shadow: 2px 2px 5px black;
+        }
         @media (max-width: 768px) {
             p,li{
                 font-size: 10px;
@@ -198,11 +250,14 @@
                 font-size: 12px;
             }
             .button{
-                font-size: 8px;
+                font-size: 10px;
                 border-width: 2px;
             }
             .banner{
                 height: 50%;
+                background-position: -60px;
+                background-size: cover;
+                background-repeat: no-repeat;
             }
             .logo{
                 justify-content: center;
@@ -224,6 +279,7 @@
                 justify-content: center;
                 align-items: center;
                 width: 95%;
+                scroll-margin-top: 70px;
             }
             .bold{
                 font-size: 10px;
@@ -235,20 +291,95 @@
                 width: 20px;
                 height: 20px;
             }
+            .drawerIcon{
+                width: 35px;
+                height: 35px;
+            }
+            .drawerContainer{
+                display: flex;
+                justify-content: flex-end;
+                visibility: hidden;
+            }
+            .drawerHeader{
+                background-color: white;
+                width: 96%;
+                border-radius: 10px;
+                box-shadow: 2px 2px 2px black;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 5px;
+                margin-bottom: 10px;
+            }
+            .menu{
+                right: 0px;
+                top: 50px;
+                width: 70%;
+            }
+            .devinfo{
+                color: darkblue;
+                font-size: 10px;
+            }
+            h5{
+                font-size: 10px;
+            }
+            .owner{
+                font-size: 12px;
+                text-align: center;
+            }
         }
     </style>
     <body id="home">
             <!-- start of header section -->
             <div class="header">
-                <div class="logo"><img src=".\Logo.jpeg" class="logoImg">
-                <h1>Nest Food Delivery</h1></div>
+                <div class="logo">
+                    <img src=".\Logo.jpeg" class="logoImg">
+                    <h1>Nest Food Delivery</h1>
+                </div>
+                <script>
+                    function Drawer(){
+                        const drawer = document.getElementById("drawer");
+                        if (drawer.style.visibility === "visible"){
+                            drawer.style.visibility = "hidden";
+                        }
+                        else{
+                            drawer.style.visibility = "visible";
+                        }
+                    }
+                    function Tamil(){
+                        const tamil = document.getElementById("isChecked");
+                        if(tamil.checked == true){
+                            window.location.href = "./tamil.html";
+                        }
+                        else{
+                            window.location.href = "./index.html";
+                        }
+                    }
+                </script>
+            <div class="drawerContainer" id="drawer">
+                <img src="./menu.jpg" class="drawerIcon" onclick="Drawer()">
                 <div class="menu">
-                    <a href="tamil.html" class="button">தமிழ்</a>
+                    <div class="drawerHeader">
+                        <img src=".\Logo.jpeg" class="logoImg">
+                        <h2>Nest Food Delivery</h2>
+                        <div style="display: flex;flex-direction: row;justify-content: center;align-items: center; margin-left: 10%;">
+                            <input type="checkbox" id="isChecked" onchange="Tamil()">
+                            <h5>தமிழுக்கு</h5>
+                        </div>
+                    </div>
                     <a href="#home" class="button">Home</a>
                     <a href="#about" class="button">About</a>
                     <a href="#service" class="button">Service</a>
                     <a href="#contact" class="button">Contact</a>
+                    <a href="./Print Udyam Registration Certificate.pdf" class="button">Udyam Certificate</a>
+                    <h4>GSTIN : 33BLVPS5767D1ZH</h4>
+
+
+                    <div class="dev">
+                        <h5 class="devinfo">Developed By,<br>🧑‍💻 J. Rosan John Redsin BCA<br>📲 8754558543<br>📩 jrjr1405.player@gmail.com<br>🏠 Jafferkhanpet, Chennai-83</h5>
+                    </div>
                 </div>
+            </div>
             </div>
             <!-- end of header section -->
 <!-- ----------------------------------------------------------------------------------------------------------- -->
@@ -264,6 +395,7 @@
             <div class="about" id="about">
                 <div class="container">
                     <h2>About Us,</h2>
+                    <h3 class="owner">Sole Proprietorship by, Victor Christu Raju Selvaraj</h3>
                     <p><b class="bold">Bridging Kitchens and Communities, One Meal at a Time.</b><br>
                     At <b>Nest Food Delivery</b>, we redefine convenience by delivering delicious meals where they’re needed most, whether it’s
                     from your favorite hotel to your home, or from your home kitchen straight to institutions.<br>
@@ -280,6 +412,7 @@
                     Whether you’re ordering a gourmet dinner or sending a home-cooked lunch to your child’s school, <b><i>Nest Food Delivery</i></b>
                     makes sure every meal arrives with warmth and reliability.<br>
                     <b class="bold">Connecting kitchens to hearts, one delivery at a time.</b></p>
+
                 </div>
                 <div class="about-image">
                     <img src="https://static3.depositphotos.com/1006214/208/i/450/depositphotos_2089648-stock-photo-businessman-smiling-and-pointing.jpg" class="img">
@@ -293,20 +426,20 @@
                 <div class="container">
                     <h2>Our Service,</h2>
                 <b class="bold">Fast. Fresh. Local.<br></b>
-                <p>At <b>Nest Food Delivery</b>, we offer specialized food delivery services designed to bring convenience, taste, and care to your daily meals, all within <b>Nagercoil and Kanyakumari</b>.
+                <p>At <b>Nest Food Delivery</b>, we offer specialized food delivery services designed to bring convenience, taste, and care to your daily meals, all within <b>Nagercoil, Kanyakumari Dist</b>.
                 Whether you’re craving hotel food at home or sending a home-cooked meal to a loved one at school, we’ve got you covered.<br></p>
                 <div class="cardHolder">
                     <div class="card">
                         <h4>🍽️ Hotel-to-Home Delivery</h4>
                         Craving restaurant-style meals from your favorite local hotels? We deliver hot and delicious food directly to your doorstep, safely and swiftly.<br>
-                        ➡️Available throughout Nagercoil<br>
+                        ➡️Available throughout Nagercoil, Kanyakumari Dist<br>
                         ➡️Real-time order tracking<br>
                         ➡️Partnered with top-rated local hotels<br>
                     </div>
                     <div class="card">
                         <h4>🏠 Home-to-Institution Delivery</h4>
                         Send nutritious, homemade food to your children at institutions at right time at right price.<br>
-                        ➡️Currently offered in Nagercoil<br>
+                        ➡️Currently offered in Nagercoil, Kanyakumari Dist<br>
                         ➡️Monthly Subscription-Based Service<br>
                         ➡️Ideal for daily lunch routines<br>
                         ➡️On-time delivery to designated institutions<br>
@@ -349,7 +482,7 @@
                         <div class="card2">
                             <h4>📍 Our Service Areas</h4>
                             <p><strong>Currently available in:</strong><br>
-                                Nagercoil & Kanyakumari</p>
+                                Nagercoil, Kanyakumari Dist</p>
                             <p>We proudly serve these regions with timely and reliable food delivery services. Whether you're ordering a hot
                                 meal from your favorite hotel or sending a home-cooked lunch to a school, we've got you covered
                                 locally.</p>
@@ -386,11 +519,11 @@
             </p>
             <!-- 2. Social Media Links -->
             <div style="display: flex; justify-content: center; gap: 20px; padding: 10px;">
-                <a href="https://facebook.com/yourpage" target="_blank" class="link" title="Facebook">
+                <a href="https://www.facebook.com/media/set/?set=a.344773907666939" target="_blank" class="link" title="Facebook">
                     <img src="https://i.pinimg.com/736x/42/75/49/427549f6f22470ff93ca714479d180c2.jpg" class="icon"
                         alt="Facebook" style="width: 30px; height: 30px;">
                 </a>
-                <a href="https://instagram.com/yourpage" target="_blank" class="link" title="Instagram">
+                <a href="https://www.instagram.com/nest_tourism_s_s_rajiv/" target="_blank" class="link" title="Instagram">
                     <img src="https://png.pngtree.com/png-clipart/20180626/ourmid/pngtree-instagram-icon-instagram-logo-png-image_3584852.png"
                         class="icon" alt="Instagram" style="width: 30px; height: 30px;">
                 </a>

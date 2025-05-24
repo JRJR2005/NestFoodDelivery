@@ -2,7 +2,13 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ணெஸ்ட் ஃபூட் டெலிவரி</title>
+        <meta name="description" content="நெஸ்ட் ஃபூட் டெலிவரி - ஒவ்வொரு டெலிவரியிலும் பராமரிப்பு">
+        <meta name="keywords" content="உணவு டெலிவரி, நாகர்கோவிலில் உணவு டெலிவரி, காலை உணவு, மதிய உணவு, இரவு உணவு, வீடிலிருந்து கல்வி நிலையம் டெலிவரி, ஹோட்டலிலிருந்து வீடு டெலிவரி, நெஸ்ட் மதிய உணவு டெலிவரி, பள்ளி மதிய உணவு டெலிவரி">
+        <meta name="author" content="நெஸ்ட் உணவு டெலிவரி - JRJR">
+        <meta property="og:title" content="நெஸ்ட் உணவு டெலிவரி">
+        <meta property="og:description" content="ஒவ்வொரு டெலிவரியிலும் பராமரிப்பு - வேகமான, நம்பிக்கைக்குரிய காலை, மதியம் மற்றும் இரவு உணவு டெலிவரி சேவை.">
+        
+        <title>நெஸ்ட் ஃபூட் டெலிவரி</title>
     </head>
     <style>
         body{
@@ -12,11 +18,12 @@
             scroll-behavior: smooth;
         }
         .banner{
-            background-image: url("https://www.kitchenking.in/wp-content/uploads/2021/08/Signoraware-Best-Steel-Innovative-Lunch-Box.png");
+            background-image: url("./banner.png");
             background-position: center;
             background-size: cover;
             width: 100%;
-            height: 90%;
+            height: 100%;
+            max-height: 150%;
             border-radius: 10px;
             align-items: center;
             align-content: center;
@@ -49,32 +56,6 @@
         }
         .body{
             padding: 5px;
-        }
-        .button{
-            width: 20%;
-            font-size: 16px;
-            background-color: white;
-            border-radius: 10px;
-            padding: 3px;
-            font-weight: bold;
-            color: darkblue;
-            border-color: darkblue;
-            border-width: medium;
-            border-style: outset;
-            text-align: center;
-            font-size: 18px;
-        }
-        .button:hover{
-            box-shadow: 2px 2px 5px black;
-        }
-        .menu{
-            display: flex;
-            flex-direction: row;    
-            justify-content: space-evenly;
-            align-content: space-between;
-            align-items: center;
-            width: 60%;
-            margin-right: 5px;
         }
         .container {
             width: 58%;
@@ -183,6 +164,78 @@
             font-size: 18px;
             text-transform: uppercase;
         }
+        .drawerIcon{
+                width: 60px;
+                height: 60px;
+                border-radius: 50px;
+                margin-right: 20px;
+                visibility: visible;
+                transition: width 1s, height 1s;
+        }
+        .drawerIcon:hover{
+            box-shadow: 2px 2px 8px black;
+            visibility: visible;
+        }
+        .drawerContainer{
+            display: flex;
+            justify-content: flex-end;
+            visibility: hidden;
+        }
+        .drawerHeader{
+            background-color: white;
+            width: 96%;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px black;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .menu{
+            position: absolute;
+            backface-visibility: hidden;
+            right: 5px;
+            top: 100px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;    
+            margin: 10px;
+            align-items: center;
+            width: 30%;
+            background-color: rgba(255, 255, 255, 0.527);
+            box-shadow: 2px 2px 10px black;
+            border-radius: 10px;
+        }
+        .dev{
+            background-color: white;
+            width: 96%;
+            padding: 5px;
+            border-radius: 10px;
+            border-width: thin;
+            border-style: ridge;
+        }
+        .devinfo{
+                color: darkblue;
+                font-size: 14px;
+        }
+        .button{
+            width: 90%;
+            font-size: 16px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 5px;
+            font-weight: bold;
+            color: darkblue;
+            border-color: darkblue;
+            border-bottom: 2px solid black;
+            margin-bottom: 2px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .button:hover{
+            box-shadow: 2px 2px 5px black;
+        }
         @media (max-width: 768px) {
             p,li{
                 font-size: 8px;
@@ -227,6 +280,7 @@
                 justify-content: center;
                 align-items: center;
                 width: 95%;
+                scroll-margin-top: 70px;
             }
             .bold{
                 font-size: 10px;
@@ -238,6 +292,46 @@
                 width: 20px;
                 height: 20px;
             }
+            .drawerIcon{
+                width: 35px;
+                height: 35px;
+            }
+            .drawerContainer{
+                display: flex;
+                justify-content: flex-end;
+                visibility: hidden;
+            }
+            .drawerHeader{
+                background-color: white;
+                width: 96%;
+                border-radius: 10px;
+                box-shadow: 2px 2px 2px black;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 5px;
+                margin-bottom: 10px;
+            }
+            .menu{
+                right: 0px;
+                top: 50px;
+                width: 70%;
+            }
+            .devinfo{
+                color: darkblue;
+                font-size: 10px;
+            }
+            h5{
+                font-size: 10px;
+            }
+            .owner{
+                font-size: 12px;
+                text-align: center;
+            }
+            .headerTitle{
+                font-size: 10   px;
+            }
+
         }
     </style>
 
@@ -246,16 +340,51 @@
     <div class="header">
         <div class="logo">
             <img src=".\Logo.jpeg" class="logoImg">
-            <h1>ணெஸ்ட் ஃபூட் டெலிவரி</h1>
+            <h1>நெஸ்ட் ஃபூட் டெலிவரி</h1>
         </div>
-        <div class="menu">
-            <a href="index.html" class="button">English</a>
-            <a href="#home" class="button">முகப்பு</a>
-            <a href="#about" class="button">பற்றி</a>
-            <a href="#service" class="button">சேவை</a>
-            <a href="#contact" class="button">தொடர்பு</a>
-        </div>
-    </div>
+        <script>
+            function Drawer() {
+                const drawer = document.getElementById("drawer");
+                if (drawer.style.visibility === "visible") {
+                    drawer.style.visibility = "hidden";
+                }
+                else {
+                    drawer.style.visibility = "visible";
+                }
+            }
+            function Tamil() {
+                const tamil = document.getElementById("isChecked");
+                if (tamil.checked == false) {
+                    window.location.href = "./index.html";
+                }
+                else {
+                    window.location.href = "./index.html";
+                }
+            }
+        </script>
+            <div class="drawerContainer" id="drawer">
+                <img src="./menu.jpg" class="drawerIcon" onclick="Drawer()">
+                <div class="menu">
+                    <div class="drawerHeader">
+                        <img src=".\Logo.jpeg" class="logoImg">
+                        <h2 class="headerTitle">நெஸ்ட் ஃபூட் டெலிவரி</h2>
+                        <div style="display: flex;flex-direction: row;justify-content: center;align-items: center; margin-left: 10%;">
+                            <input type="checkbox" id="isChecked" onchange="Tamil()">
+                            <h5>தமிழுக்கு</h5>
+                        </div>
+                    </div>
+                    <a href="#home" class="button">Home</a>
+                    <a href="#about" class="button">About</a>
+                    <a href="#service" class="button">Service</a>
+                    <a href="#contact" class="button">Contact</a>
+                    <a href="./Print Udyam Registration Certificate.pdf" class="button">Udyam Certificate</a>
+                    <h4>GSTIN : 33BLVPS5767D1ZH</h4>
+                    <div class="dev">
+                        <h5 class="devinfo">Developed By,<br>🧑‍💻 J. Rosan John Redsin BCA<br>📲 8754558543<br>📩 jrjr1405.player@gmail.com<br>🏠 Jafferkhanpet, Chennai-83</h5>
+                    </div>
+                </div>
+            </div>
+            </div>
     <!-- end of header section -->
 
     <!-- banner -->
@@ -269,9 +398,10 @@
             <div class="container">
                 <h2>எங்களைப் பற்றி,</h2>
                 <p>
+                    <h3 class="owner">Sole Proprietorship by, வித்யா கிறிஸ்து ராஜு செல்வராஜ்</h3>
                     <b class="bold">சமையலறையும் சமூகங்களையும் இணைக்கும்
                         பிணைப்பு</b><br>
-                    <b>ணெஸ்ட் ஃபூட் டெலிவரி</b>யில், உங்கள் விருப்பமான ஹோட்டலிலிருந்து வீட்டுக்கு அல்லது வீட்டிலிருந்து
+                    <b>நெஸ்ட் ஃபூட் டெலிவரி</b>யில், உங்கள் விருப்பமான ஹோட்டலிலிருந்து வீட்டுக்கு அல்லது வீட்டிலிருந்து
                     பள்ளி/இன்ஸ்டிடியூஷன் வரை – தேவையான இடத்தில் சுவையான உணவை கொண்டு செல்வதை நோக்கமாகக் கொண்டு
                     செயல்படுகிறோம்.<br>
                     நாம் ஒரு சாதாரண டெலிவரி சேவை அல்ல – உணவை ஒரு பாசமிக்க அனுபவமாக மாற்றுகிறோம். உணவு என்பது அக்கறை,
@@ -289,7 +419,7 @@
                     காணலாம்.<br>
                     <b style="padding: 20px;"> ➡️ உள்ளூர் சமையலர்களுக்கு ஆதரவு:</b> வீட்டு சமையலர்களை ஊக்குவித்து,
                     அவர்களின் சேர்க்கையை பெருக்குகிறோம்.<br>
-                    உங்கள் குழந்தைக்கான உணவோ அல்லது உங்கள் விருந்திற்கான உணவோ, <b><i>ணெஸ்ட் ஃபூட் டெலிவரி</i></b> உணவை
+                    உங்கள் குழந்தைக்கான உணவோ அல்லது உங்கள் விருந்திற்கான உணவோ, <b><i>நெஸ்ட் ஃபூட் டெலிவரி</i></b> உணவை
                     நம்பிக்கையுடன் கொண்டு சேர்க்கிறது.<br>
                     <b class="bold">ஒவ்வொரு டெலிவரியும் அன்புடனும்
                         நம்பிக்கையுடனும்.</b>
@@ -309,8 +439,8 @@
                 <h2>எங்கள் சேவை,</h2>
                 <b class="bold">வேகம். நம்பிக்கையானது. உள்ளூராட்சி.</b>
                 <p>
-                    <b>ணெஸ்ட் ஃபூட் டெலிவரி</b>யில், நாங்கள் உங்கள் நாள் தோறும் சாப்பாட்டை எளிதாகவும் சுவையாகவும்
-                    செய்வதற்கான சேவையை நாகர்கோவில் மற்றும் கன்யாகுமரி பகுதிகளில் வழங்குகிறோம்.<br>
+                    <b>நெஸ்ட் ஃபூட் டெலிவரி</b>யில், நாங்கள் உங்கள் நாள் தோறும் சாப்பாட்டை எளிதாகவும் சுவையாகவும்
+                    செய்வதற்கான சேவையை நாகர்கோவில் (கன்யாகுமரி மாவட்டம்) பகுதிகளில் வழங்குகிறோம்.<br>
                     நீங்கள் ஹோட்டல் உணவை வீட்டில் வேண்டுமா? அல்லது உங்கள் குழந்தைக்கு வீட்டு உணவை பள்ளிக்கு அனுப்ப
                     வேண்டுமா? நாங்கள் இங்கே உள்ளோம்.<br>
                 </p>
@@ -371,7 +501,7 @@
                     <div class="card2">
                         <h4>📍 எங்கள் சேவை பகுதிகள்</h4>
                         <p><strong>தற்போது கிடைக்கும் பகுதிகள்:</strong>
-                            நாகர்கோவில்</p>
+                            நாகர்கோவில், கன்யாகுமரி மாவட்டம்</p>
                         <p>நாங்கள் பெருமையாக இந்த பகுதிகளுக்கு துல்லியமான மற்றும் நம்பகமான உணவு டெலிவரி சேவைகளை வழங்குகிறோம். உங்கள் பிடித்த
                             ஹோட்டலில் இருந்து சூடான உணவை ஆர்டர் செய்வீர்களா அல்லது பள்ளிக்குச் வீட்டிலிருந்து சமையல் செய்யப்பட்ட மதிய உணவை
                             அனுப்புகிறீர்களா, உள்ளூர் அளவில் நாங்கள் உங்களுடன் உள்ளோம்.</p>
@@ -381,7 +511,7 @@
 
                     <div class="card2">
                         <h4>📬 எங்கள் அலுவலக முகவரி</h4>
-                        <p><strong>ணெஸ்ட் ஃபூட் டெலிவரி</strong><br>
+                        <p><strong>நெஸ்ட் ஃபூட் டெலிவரி</strong><br>
                             219, ராஜக்கமங்கலம் சாலை, புன்னை நகர்,<br>
                             நாகர்கோவில், கன்யாகுமரி மாவட்டம்,<br>
                             தமிழ்நாடு - 629 004, இந்தியா<br>
@@ -400,15 +530,15 @@
         <div class="footer">
             <!-- 1. Copyright -->
             <p style="text-align: center; border-radius: 10px; padding: 10px; background-color: #f5f5f5; font-weight: bold;">
-                © 2025 ணெஸ்ட் ஃபூட் டெலிவரி. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.
+                © 2025 நெஸ்ட் ஃபூட் டெலிவரி. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.
             </p>
             <!-- 2. Social Media Links -->
             <div style="display: flex; justify-content: center; gap: 20px; padding: 10px;">
-                <a href="https://facebook.com/yourpage" target="_blank" class="link" title="Facebook">
-                    <img src="https://i.pinimg.com/736x/42/75/49/427549f6f22470ff93ca714479d180c2.jpg" class="icon"
-                        alt="Facebook" style="width: 30px; height: 30px;">
+                <a href="https://www.facebook.com/media/set/?set=a.344773907666939" target="_blank" class="link" title="Facebook">
+                    <img src="https://i.pinimg.com/736x/42/75/49/427549f6f22470ff93ca714479d180c2.jpg" class="icon" alt="Facebook"
+                        style="width: 30px; height: 30px;">
                 </a>
-                <a href="https://instagram.com/yourpage" target="_blank" class="link" title="Instagram">
+                <a href="https://www.instagram.com/nest_tourism_s_s_rajiv/" target="_blank" class="link" title="Instagram">
                     <img src="https://png.pngtree.com/png-clipart/20180626/ourmid/pngtree-instagram-icon-instagram-logo-png-image_3584852.png"
                         class="icon" alt="Instagram" style="width: 30px; height: 30px;">
                 </a>
