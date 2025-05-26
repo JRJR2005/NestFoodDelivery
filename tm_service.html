@@ -1,0 +1,468 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nest Food Delivery - Care in Every Delivery">
+    <meta name="keywords"
+        content="food delivery, food delivery at Nagercoil, breakfast, lunch, dinner, home to institute delivery, hotel to home delivery, Nest Lunch Delivery, school lunch delivery">
+    <meta name="author" content="Nest Food Delivery - JRJR">
+    <meta property="og:title" content="Nest Food Delivery">
+    <meta property="og:description"
+        content="Care in Every Delivery - Fast, reliable breakfast, lunch and dinner delivery service.">
+    <title>Nest Food Delivery - Our Service</title>
+</head>
+<style>
+    body{
+        padding: 5px;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    .banner{
+        background-image: url("./banner.png");
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 110%;
+        max-height: 150%;
+        border-radius: 10px;
+        align-items: center;
+        align-content: center;
+        margin-top: 10px;
+    }
+    .logo{
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+    }
+    .logoImg{
+        border-radius: 30px;
+        border-width: medium;
+        border-style: groove;
+        width:70px; 
+        height:70px;
+    }
+    .header{
+        background-color: white;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        position: sticky;
+        top: 0px;
+    }
+    .body{
+        padding: 5px;
+    }
+    .container {
+        width: 58%;
+        padding: 10px;
+        text-align: justify;
+    }
+
+    .img {
+        width: 100%;
+        border-radius: 8px;
+        margin-top: 50px;
+    }
+
+    .about-image {
+        width: 40%;
+    }
+    .about,.service,.contact{
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: space-between;
+        box-shadow: 2px 2px 10px black;
+        padding: 10px;
+        width: 99%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        scroll-margin-top: 150px;
+    }
+    .contactContainer{
+        width: 100%;
+        padding: 10px;
+        text-align: justify;
+        line-height: 20px;
+        font-size: 17px;
+    }
+    .cardholder{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        align-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .card{
+        box-shadow: 2px 2px 5px black;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 20px;
+        padding: 10px;
+        width: 40%;
+        line-height: 23px;
+        border-radius: 10px;
+    }
+    .card2{
+        box-shadow: 2px 2px 5px black;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 20px;
+        padding: 10px;
+        width: 40%;
+        line-height: 23px;
+        border-radius: 10px;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+    }
+    h4{
+        text-align: center;
+    }
+    h1{
+        font-size: 23px;
+    }
+    p{
+        line-height: 20px;
+    }
+    .followUs{
+        text-align: center;
+        padding: 10px;
+        color: darkgreen;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .link{
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        font-size: large;
+        padding: 5px;
+    }
+    .link:hover{
+        box-shadow: 1px 1px 5px black;
+        border-radius: 20px;
+    }
+    .icon{
+        width: 38px;    
+        height: 38px;
+        border-radius: 50px;
+    }
+    .bold{
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    .drawerIcon{
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            margin-right: 20px;
+            visibility: visible;
+            transition: width 1s, height 1s;
+    }
+    .drawerIcon:hover{
+        box-shadow: 2px 2px 8px black;
+        visibility: visible;
+    }
+    .drawerContainer{
+        display: flex;
+        justify-content: flex-end;
+        visibility: hidden;
+    }
+    .drawerHeader{
+        background-color: white;
+        width: 96%;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px black;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    .menu{
+        position: absolute;
+        backface-visibility: hidden;
+        right: 5px;
+        top: 100px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;    
+        margin: 10px;
+        align-items: center;
+        width: 30%;
+        background-color: rgba(255, 255, 255, 0.527);
+        box-shadow: 2px 2px 10px black;
+        border-radius: 10px;
+    }
+    .dev{
+        background-color: white;
+        width: 96%;
+        padding: 5px;
+        border-radius: 10px;
+        border-width: thin;
+        border-style: ridge;
+    }
+    .devinfo{
+            color: darkblue;
+            font-size: 14px;
+    }
+    .button{
+        width: 90%;
+        font-size: 16px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 5px;
+        font-weight: bold;
+        color: darkblue;
+        border-color: darkblue;
+        border-bottom: 2px solid black;
+        margin-bottom: 2px;
+        text-align: center;
+        font-size: 18px;
+        text-decoration: none;
+    }
+    .button:hover{
+        box-shadow: 2px 2px 5px black;
+    }
+    @media (max-width: 768px) {
+        p,li{
+            font-size: 8px;
+            line-height: 13px;
+        }
+        h4{
+            font-size: 9px;
+        }
+        h2{
+            font-size: 10px;
+        }
+        .link{
+            font-size: 10px;
+        }
+        .logo{
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            font-size: 12px;
+        }
+        .button{
+            font-size: 8px;
+            border-width: 2px;
+        }
+        .banner{
+            height: 50%;
+            aspect-ratio: 4 / 3;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            justify-content: center;
+        }
+        .logoImg{
+            border-radius: 20px;
+            width: 20px;
+            height: 20px;
+        }
+        .card,.card2{
+            font-size: 10px;
+            line-height: 12px;
+            width: 100%;
+        }
+        .about,.service,.contact{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 95%;
+            scroll-margin-top: 70px;
+        }
+        .bold,b{
+            font-size: 10px;
+        }
+        .container{
+            width: 95%;
+        }
+        .logoImg{
+            width: 20px;
+            height: 20px;
+        }
+        .drawerIcon{
+            width: 35px;
+            height: 35px;
+        }
+        .drawerContainer{
+            display: flex;
+            justify-content: flex-end;
+            visibility: hidden;
+        }
+        .drawerHeader{
+            background-color: white;
+            width: 96%;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px black;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .menu{
+            right: 0px;
+            top: 50px;
+            width: 70%;
+        }
+        .devinfo{
+            color: darkblue;
+            font-size: 10px;
+        }
+        h5{
+            font-size: 10px;
+        }
+        .owner{
+            font-size: 12px;
+            text-align: center;
+        }
+        .headerTitle{
+            font-size: 10   px;
+        }
+        .img{
+            margin-top: 0px;
+        }
+    }
+</style>
+
+<body id="home">
+    <!-- start of header section -->
+    <div class="header">
+        <div class="logo">
+            <img src=".\Logo.jpeg" class="logoImg">
+            <h1>நெஸ்ட் ஃபூட் டெலிவரி</h1>
+        </div>
+        <script>
+            function Drawer() {
+                const drawer = document.getElementById("drawer");
+                if (drawer.style.visibility === "visible") {
+                    drawer.style.visibility = "hidden";
+                }
+                else {
+                    drawer.style.visibility = "visible";
+                }
+            }
+            function Tamil() {
+                const tamil = document.getElementById("isChecked");
+                if (tamil.checked == false) {
+                    window.location.href = "./service.html";
+                }
+                else {
+                    window.location.href = "./tm_service.html";
+                }
+            }
+        </script>
+        <div class="drawerContainer" id="drawer">
+            <img src="./menu.jpg" class="drawerIcon" onclick="Drawer()">
+            <div class="menu">
+                <div class="drawerHeader">
+                    <img src=".\Logo.jpeg" class="logoImg">
+                    <h2>Nest Food Delivery</h2>
+                    <div
+                        style="display: flex;flex-direction: row;justify-content: center;align-items: center; margin-left: 10%;">
+                        <input type="checkbox" id="isChecked" checked onchange="Tamil()">
+                        <h5>தமிழுக்கு</h5>
+                    </div>
+                </div>
+                <a href="./tamil.html" class="button">Home</a>
+                <a href="./tm_about.html" class="button">About</a>
+                <a href="./tm_service.html" class="button">Service</a>
+                <a href="./tm_contact.html" class="button">Contact</a>
+                <a href="./Print Udyam Registration Certificate.pdf" class="button">Udyam Certificate</a>
+                <h4>GSTIN : 33BLVPS5767D1ZH</h4>
+
+
+                <div class="dev">
+                    <h5 class="devinfo">Developed By,<br>🧑‍💻 J. Rosan John Redsin BCA<br>📲 8754558543<br>📩
+                        jrjr1405.player@gmail.com<br>🏠 Jafferkhanpet, Chennai-83</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of header section -->
+            <!-- start of body service section -->
+            <div class="service" id="service">
+                <img src="https://www.mppmarketinggroup.com/wp-content/uploads/2021/06/3PDHeaderImage1-1024x780.jpg"
+                    height="50%" width="40%">
+                <div class="container">
+                    <h2>எங்கள் சேவை,</h2>
+                    <b class="bold">வேகம். நம்பிக்கையானது. உள்ளூராட்சி.</b>
+                    <p><b>நெஸ்ட் உணவுப் பொருள் டெலிவரி</b>யில், உங்கள் அன்றாட உணவுக்கு வசதியும், சுவையும், பராமரிப்பும் சேர்க்கும் சிறப்பான
+                        உணவுப் பொருள் டெலிவரி சேவைகளை <b>நாகர்கோவில், கன்னியாகுமரி மாவட்டத்தில்</b> வழங்குகிறோம்.<br>
+                        நீங்கள் வீட்டில் ஹோட்டல் உணவை ஆசைப்படுகிறீர்களா அல்லது பள்ளியில் உள்ள உங்களின் பிரியமானவருக்கு வீட்டுச் சமைப்பை
+                        அனுப்ப விரும்புகிறீர்களா — எங்களிடம் எல்லாம் உள்ளது.<br>
+                        எதிர்காலத்தை நோக்கி, எங்கள் சேவைகளை <b>தென் தமிழ்நாடு முழுவதும்</b> விரிவுபடுத்தவும், பின்னர் <b>தமிழ்நாட்டின்
+                            ஒவ்வொரு மூலையிலும்</b> உணர்வுபூர்வமான உணவுகளை அதிகமான குடும்பங்களுக்கும் நிறுவனங்களுக்கும் எளிதாகக் கிடைக்கச்
+                        செய்யவும் நோக்கமுள்ளோம்.
+                    </p>
+                        
+                    <div class="cardHolder">
+                        <div class="card">
+                            <h4>🍽️ ஹோட்டலிலிருந்து வீடு</h4>
+                            உங்கள் விருப்பமான ஹோட்டலிலிருந்து சுடச்சுட உணவை உங்கள் வீட்டு வாசலில் கொண்டு சேர்க்கிறோம்.<br>
+                            ➡️ நாகர்கோவில் முழுவதும் சேவை<br>
+                            ➡️ நேரடி கண்காணிப்பு<br>
+                            ➡️ பிரபலமான ஹோட்டல்களுடன் கூட்டாண்மை<br>
+                        </div>
+                        <div class="card">
+                            <h4>🏠 வீட்டிலிருந்து இன்ஸ்டிடியூஷன்களுக்கு</h4>
+                            உங்கள் குழந்தைக்கு தினசரி வீட்டு சமைத்த உணவை நம்பிக்கையுடன் பள்ளிக்கு அனுப்புங்கள்.<br>
+                            ➡️ தற்போது நாகர்கோவிலில் கிடைக்கும்<br>
+                            ➡️ மாத சந்தாதாரர் முறை<br>
+                            ➡️ தினசரி மதிய உணவுக்கு சிறந்தது<br>
+                            ➡️ பள்ளிகளுக்கு நேரத்தில் டெலிவரி<br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- end of body service section -->
+                     <!-- start of footer section -->
+        <div class="footer">
+        <div class="footer">
+            <!-- 1. Copyright -->
+            <p style="text-align: center; border-radius: 10px; padding: 10px; background-color: #f5f5f5; font-weight: bold;">
+                © 2025 நெஸ்ட் ஃபூட் டெலிவரி. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.
+            </p>
+            <!-- 2. Social Media Links -->
+            <div style="display: flex; justify-content: center; gap: 20px; padding: 10px;">
+                <a href="https://www.facebook.com/NESTTOURISMNAGERCOIL" target="_blank" class="link" title="Facebook">
+                    <img src="https://i.pinimg.com/736x/42/75/49/427549f6f22470ff93ca714479d180c2.jpg" class="icon" alt="Facebook"
+                        style="width: 30px; height: 30px;">
+                </a>
+                <a href="https://www.instagram.com/nest_tourism_s_s_rajiv/" target="_blank" class="link" title="Instagram">
+                    <img src="https://png.pngtree.com/png-clipart/20180626/ourmid/pngtree-instagram-icon-instagram-logo-png-image_3584852.png"
+                        class="icon" alt="Instagram" style="width: 30px; height: 30px;">
+                </a>
+                <a href="https://wa.me/9159158227" target="_blank" class="link" title="Chat on WhatsApp">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/029/204/552/small_2x/phone-icon-3d-rendering-png.png"
+                        class="icon" alt="WhatsApp" style="width: 30px; height: 30px;">
+                </a>
+            </div>
+            <!-- 3. Optional Additions -->
+            <div style="text-align: center; font-size: 14px; margin-top: 10px;">
+                <a href="./tm_terms.html" class="link" style="margin: 0 10px;">Terms & Conditions</a> |
+                <a href="./tm_privacy.html" class="link" style="margin: 0 10px;">Privacy Policy</a> |
+                <a href="./tm_faq.html" class="link" style="margin: 0 10px;">FAQ</a>
+            </div>
+        </div>
+</body>
+
+</html>

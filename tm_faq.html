@@ -16,12 +16,25 @@
             scroll-behavior: smooth;
         }
 
-        .header {
-            background-color: white;
+        .logo{
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: row;
             padding: 10px;
+        }
+        .logoImg{
+            border-radius: 30px;
+            border-width: medium;
+            border-style: groove;
+            width:70px; 
+            height:70px;
+        }
+        .header{
+            background-color: white;
+            align-items: center;
+            align-content: center;
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
             box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
@@ -87,15 +100,6 @@
         .faq-grid button:hover {
             box-shadow: 2px 2px 5px black;
         }
-
-        .footer {
-            margin-top: 30px;
-            padding: 20px 10px;
-            background-color: #f5f5f5;
-            text-align: center;
-            border-radius: 10px;
-        }
-
         .icon {
             width: 30px;
             height: 30px;
@@ -121,19 +125,95 @@
             flex-wrap: wrap;
             margin-top: 10px;
         }
+        .drawerIcon{
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            margin-right: 20px;
+            visibility: visible;
+            transition: width 1s, height 1s;
+        }
+        .drawerIcon:hover{
+            box-shadow: 2px 2px 8px black;
+            visibility: visible;
+        }
+        .drawerContainer{
+            display: flex;
+            justify-content: flex-end;
+            visibility: hidden;
+        }
+        .drawerHeader{
+            background-color: white;
+            width: 96%;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px black;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .menu{
+            position: absolute;
+            backface-visibility: hidden;
+            right: 5px;
+            top: 100px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;    
+            margin: 10px;
+            align-items: center;
+            width: 30%;
+            background-color: rgba(255, 255, 255, 0.527);
+            box-shadow: 2px 2px 10px black;
+            border-radius: 10px;
+        }
+        .dev{
+            background-color: white;
+            width: 96%;
+            padding: 5px;
+            border-radius: 10px;
+            border-width: thin;
+            border-style: ridge;
+        }
+        .devinfo{
+                color: darkblue;
+                font-size: 14px;
+        }
+        .button{
+            width: 90%;
+            font-size: 16px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 5px;
+            font-weight: bold;
+            color: darkblue;
+            border-color: darkblue;
+            border-bottom: 2px solid black;
+            margin-bottom: 2px;
+            text-align: center;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        .button:hover{
+            box-shadow: 2px 2px 5px black;
+        }
         @media (max-width: 768px) {
-            p,li,a{
-                font-size: 9px;
+            p,li{
+                font-size: 10px;
                 line-height: 14px;
             }
             h4{
                 font-size: 10px;
             }
-            h2{
+            h1{
                 font-size: 12px;
             }
+            h2{
+                font-size: 14px;
+            }
             .link{
-                font-size: 10px;
+                font-size: 12px;
             }
             .card{
                 width: 91%;
@@ -142,12 +222,114 @@
                 width: 90%;
                 font-size: 12px;
             }
+            .button{
+                font-size: 10px;
+                border-width: 2px;
+                text-decoration: none;
+            }
+            .container{
+                width: 95%;
+            }
+            .logoImg{
+                width: 20px;
+                height: 20px;
+            }
+            .drawerIcon{
+                width: 35px;
+                height: 35px;
+            }
+            .drawerContainer{
+                display: flex;
+                justify-content: flex-end;
+                visibility: hidden;
+            }
+            .drawerHeader{
+                background-color: white;
+                width: 96%;
+                border-radius: 10px;
+                box-shadow: 2px 2px 2px black;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 5px;
+                margin-bottom: 10px;
+            }
+            button{
+                font-size: 10px;
+            }
+            .menu{
+                right: 0px;
+                top: 50px;
+                width: 70%;
+            }
+            .devinfo{
+                color: darkblue;
+                font-size: 10px;
+            }
+            h5{
+                font-size: 10px;
+            }
+            .owner{
+                font-size: 12px;
+                text-align: center;
+            }
         }
     </style>
 </head>
 
 <body id="home">
-
+    <!-- start of header section -->
+    <div class="header">
+        <div class="logo">
+            <img src=".\Logo.jpeg" class="logoImg">
+            <h1>நெஸ்ட் ஃபூட் டெலிவரி</h1>
+        </div>
+        <script>
+            function Drawer() {
+                const drawer = document.getElementById("drawer");
+                if (drawer.style.visibility === "visible") {
+                    drawer.style.visibility = "hidden";
+                }
+                else {
+                    drawer.style.visibility = "visible";
+                }
+            }
+            function Tamil() {
+                const tamil = document.getElementById("isChecked");
+                if (tamil.checked == false) {
+                    window.location.href = "./faq.html";
+                }
+                else {
+                    window.location.href = "./tm_faq.html";
+                }
+            }
+        </script>
+        <div class="drawerContainer" id="drawer">
+            <img src="./menu.jpg" class="drawerIcon" onclick="Drawer()">
+            <div class="menu">
+                <div class="drawerHeader">
+                    <img src=".\Logo.jpeg" class="logoImg">
+                    <h2>Nest Food Delivery</h2>
+                    <div
+                        style="display: flex;flex-direction: row;justify-content: center;align-items: center; margin-left: 10%;">
+                        <input type="checkbox" id="isChecked" checked onchange="Tamil()">
+                        <h5>தமிழுக்கு</h5>
+                    </div>
+                </div>
+                <a href="./tamil.html" class="button">Home</a>
+                <a href="./tm_about.html" class="button">About</a>
+                <a href="./tm_service.html" class="button">Service</a>
+                <a href="./tm_contact.html" class="button">Contact</a>
+                <a href="./Print Udyam Registration Certificate.pdf" class="button">Udyam Certificate</a>
+                <h4>GSTIN : 33BLVPS5767D1ZH</h4>
+                <div class="dev">
+                    <h5 class="devinfo">Developed By,<br>🧑‍💻 J. Rosan John Redsin BCA<br>📲 8754558543<br>📩
+                        jrjr1405.player@gmail.com<br>🏠 Jafferkhanpet, Chennai-83</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of header section -->
     <div class="card2">
         <h4>அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQ)</h4>
         <div class="card">

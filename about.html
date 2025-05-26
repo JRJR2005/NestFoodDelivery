@@ -1,14 +1,12 @@
-
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="நெஸ்ட் ஃபூட் டெலிவரி - ஒவ்வொரு டெலிவரியிலும் பராமரிப்பு">
-        <meta name="keywords" content="உணவு டெலிவரி, நாகர்கோவிலில் உணவு டெலிவரி, காலை உணவு, மதிய உணவு, இரவு உணவு, வீடிலிருந்து கல்வி நிலையம் டெலிவரி, ஹோட்டலிலிருந்து வீடு டெலிவரி, நெஸ்ட் மதிய உணவு டெலிவரி, பள்ளி மதிய உணவு டெலிவரி">
-        <meta name="author" content="நெஸ்ட் உணவு டெலிவரி - JRJR">
-        <meta property="og:title" content="நெஸ்ட் உணவு டெலிவரி">
-        <meta property="og:description" content="ஒவ்வொரு டெலிவரியிலும் பராமரிப்பு - வேகமான, நம்பிக்கைக்குரிய காலை, மதியம் மற்றும் இரவு உணவு டெலிவரி சேவை.">
-        
-        <title>நெஸ்ட் ஃபூட் டெலிவரி</title>
+        <meta name="description" content="Nest Food Delivery - Care in Every Delivery">
+        <meta name="keywords" content="food delivery, food delivery at Nagercoil, breakfast, lunch, dinner, home to institute delivery, hotel to home delivery, Nest Lunch Delivery, school lunch delivery">
+        <meta name="author" content="Nest Food Delivery - JRJR">
+        <meta property="og:title" content="Nest Food Delivery">
+        <meta property="og:description" content="Care in Every Delivery - Fast, reliable breakfast, lunch and dinner delivery service.">
+        <title>Nest Food Delivery - About Us</title>
     </head>
     <style>
         body{
@@ -66,7 +64,6 @@
         .img {
             width: 100%;
             border-radius: 8px;
-            margin-top: 50px;
         }
 
         .about-image {
@@ -128,11 +125,11 @@
         h4{
             text-align: center;
         }
-        h1{
-            font-size: 23px;
-        }
         p{
             line-height: 20px;
+        }
+        .img{
+            height: 80%;
         }
         .followUs{
             text-align: center;
@@ -230,33 +227,30 @@
             margin-bottom: 2px;
             text-align: center;
             font-size: 18px;
+            text-decoration: none;
         }
         .button:hover{
             box-shadow: 2px 2px 5px black;
         }
         @media (max-width: 768px) {
             p,li{
-                font-size: 8px;
-                line-height: 13px;
+                font-size: 10px;
+                line-height: 12px;
             }
             h4{
-                font-size: 9px;
+                font-size: 12px;
             }
             h2{
-                font-size: 10px;
+                font-size: 14px;
             }
             .link{
-                font-size: 10px;
-            }
-            .logo{
-                justify-content: center;
-                align-items: center;
+                font-size: 12px;
             }
             h1{
                 font-size: 12px;
             }
             .button{
-                font-size: 8px;
+                font-size: 10px;
                 border-width: 2px;
             }
             .banner{
@@ -266,6 +260,10 @@
                 background-size: cover;
                 background-repeat: no-repeat;
                 justify-content: center;
+            }
+            .logo{
+                justify-content: center;
+                align-items: center;
             }
             .logoImg{
                 border-radius: 20px;
@@ -285,7 +283,7 @@
                 width: 95%;
                 scroll-margin-top: 70px;
             }
-            .bold,b{
+            .bold{
                 font-size: 10px;
             }
             .container{
@@ -331,85 +329,107 @@
                 font-size: 12px;
                 text-align: center;
             }
-            .headerTitle{
-                font-size: 10   px;
-            }
-            .img{
-                margin-top: 0px;
-            }
         }
     </style>
-
-<body id="home">
-    <!-- start of header section -->
-    <div class="header">
-        <div class="logo">
-            <img src=".\Logo.jpeg" class="logoImg">
-            <h1>நெஸ்ட் ஃபூட் டெலிவரி</h1>
-        </div>
-        <script>
-            function Drawer() {
-                const drawer = document.getElementById("drawer");
-                if (drawer.style.visibility === "visible") {
-                    drawer.style.visibility = "hidden";
+    <body id="home">
+        <!-- start of header section -->
+        <div class="header">
+            <div class="logo">
+                <img src=".\Logo.jpeg" class="logoImg">
+                <h1>Nest Food Delivery</h1>
+            </div>
+            <script>
+                function Drawer(){
+                    const drawer = document.getElementById("drawer");
+                    if (drawer.style.visibility === "visible"){
+                        drawer.style.visibility = "hidden";
+                    }
+                    else{
+                        drawer.style.visibility = "visible";
+                    }
                 }
-                else {
-                    drawer.style.visibility = "visible";
+                function Tamil(){
+                    const tamil = document.getElementById("isChecked");
+                    if(tamil.checked == true){
+                        window.location.href = "./tm_about.html";
+                    }
+                    else{
+                        window.location.href = "./about.html";
+                    }
                 }
-            }
-            function Tamil() {
-                const tamil = document.getElementById("isChecked");
-                if (tamil.checked == false) {
-                    window.location.href = "./index.html";
-                }
-                else {
-                    window.location.href = "./tamil.html";
-                }
-            }
-        </script>
-            <div class="drawerContainer" id="drawer">
-                <img src="./menu.jpg" class="drawerIcon" onclick="Drawer()">
-                <div class="menu">
-                    <div class="drawerHeader">
-                        <img src=".\Logo.jpeg" class="logoImg">
-                        <h2 class="headerTitle">நெஸ்ட் ஃபூட் டெலிவரி</h2>
-                        <div style="display: flex;flex-direction: row;justify-content: center;align-items: center; margin-left: 10%;">
-                            <input type="checkbox" id="isChecked" checked onchange="Tamil()">
-                            <h5>English</h5>
-                        </div>
-                    </div>
-                    <a href="./tamil.html" class="button">Home</a>
-                    <a href="./tm_about.html" class="button">About</a>
-                    <a href="./tm_service.html" class="button">Service</a>
-                    <a href="./tm_contact.html" class="button">Contact</a>
-                    <a href="./Print Udyam Registration Certificate.pdf" class="button">Udyam Certificate</a>
-                    <h4>GSTIN : 33BLVPS5767D1ZH</h4>
-                    <div class="dev">
-                        <h5 class="devinfo">Developed By,<br>🧑‍💻 J. Rosan John Redsin BCA<br>📲 8754558543<br>📩 jrjr1405.player@gmail.com<br>🏠 Jafferkhanpet, Chennai-83</h5>
+            </script>
+        <div class="drawerContainer" id="drawer">
+            <img src="./menu.jpg" class="drawerIcon" onclick="Drawer()">
+            <div class="menu">
+                <div class="drawerHeader">
+                    <img src=".\Logo.jpeg" class="logoImg">
+                    <h2>Nest Food Delivery</h2>
+                    <div style="display: flex;flex-direction: row;justify-content: center;align-items: center; margin-left: 10%;">
+                        <input type="checkbox" id="isChecked" onchange="Tamil()">
+                        <h5>தமிழுக்கு</h5>
                     </div>
                 </div>
+                <a href="./index.html" class="button">Home</a>
+                <a href="./about.html" class="button">About</a>
+                <a href="./service.html" class="button">Service</a>
+                <a href="./contact.html" class="button">Contact</a>
+                <a href="./Print Udyam Registration Certificate.pdf" class="button">Udyam Certificate</a>
+                <h4>GSTIN : 33BLVPS5767D1ZH</h4>
+
+
+                <div class="dev">
+                    <h5 class="devinfo">Developed By,<br>🧑‍💻 J. Rosan John Redsin BCA<br>📲 8754558543<br>📩 jrjr1405.player@gmail.com<br>🏠 Jafferkhanpet, Chennai-83</h5>
+                </div>
             </div>
+        </div>
+        </div>
+        <!-- end of header section -->
+                    <!-- start of body about section -->
+            <div class="about" id="about">
+                <div class="container">
+                    <h2>About Us,</h2>
+                    <h3 class="owner">Sole Proprietorship by, Victor Christu Raju Selvaraj</h3>
+                    <p><b class="bold">Bridging Kitchens and Communities, One Meal at a Time.</b><br>
+                        At <b>Nest Food Delivery</b>, we redefine convenience by delivering delicious meals where they’re needed most, whether it’s
+                        from your favorite hotel to your home, or from your home kitchen straight to institutions.<br>
+                        Founded with a vision to make food delivery more personal and versatile, we’re not just a delivery service, we’re your
+                        everyday food connection. We understand that food isn’t just about eating, it’s about care, comfort, and connection.<br>
+                        <b style="padding-left: 20px;"> 🍽️ Hotel-to-Home Delivery</b> – Bringing restaurant-quality meals to your doorstep, fresh and fast.<br>
+                        <b style="padding-left: 20px;"> 🍚 Home-to-Institution Delivery</b> – Connecting home chefs and families to deliver homemade meals to schools.<br>
+                        <b class="bold">What Sets Us Apart?</b><br>
+                        <b style="padding-left: 20px;"> ➡️ Dual-Side Food Delivery:</b> Supporting both professional kitchens and home kitchens.<br>
+                        <b style="padding-left: 20px;"> ➡️ Timely & Safe:</b> Every delivery is handled with care, hygiene, and punctuality.<br>
+                        <b style="padding-left: 20px;"> ➡️ Real-Time Tracking:</b> Know where your food is at all times.<br>
+                        <b style="padding-left: 20px;"> ➡️ Empowering Local Cooks:</b> Helping home chefs reach more people and grow their impact.<br>
+                        Whether you’re ordering a gourmet dinner or sending a home-cooked lunch to your child’s school, <b><i>Nest Food Delivery</i></b> makes sure every meal arrives with warmth and reliability.<br>
+                        <b class="bold">Connecting kitchens to hearts, one delivery at a time.</b>
+                    </p>
+                    <!-- Mission & Vision -->
+                    <p>
+                        <b class="bold">🌟 Our Mission</b><br>
+                        To empower communities by delivering food that nourishes both body and soul — connecting professional kitchens and
+                        home chefs to those in need of reliable, heartfelt meals.
+                        <br><br>
+                        <b class="bold">🌍 Our Vision</b><br>
+                        To become the most trusted and inclusive food delivery network that bridges households, institutions, and
+                        restaurants, creating a world where every meal is a shared connection.                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="./owner.png" class="img">
+                </div>
             </div>
-    <!-- end of header section -->
-
-    <!-- banner -->
-    <div class="banner"></div>
-
-    <!-- body -->
-    <div class="body">
-        <!-- contact section -->
-
-            <!-- start of footer section -->
+            <!-- end of body about section -->
+                     <!-- start of footer section -->
         <div class="footer">
             <!-- 1. Copyright -->
             <p style="text-align: center; border-radius: 10px; padding: 10px; background-color: #f5f5f5; font-weight: bold;">
-                © 2025 நெஸ்ட் ஃபூட் டெலிவரி. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.
+                © 2025 Nest Food Delivery. All rights reserved.
             </p>
             <!-- 2. Social Media Links -->
             <div style="display: flex; justify-content: center; gap: 20px; padding: 10px;">
                 <a href="https://www.facebook.com/NESTTOURISMNAGERCOIL" target="_blank" class="link" title="Facebook">
-                    <img src="https://i.pinimg.com/736x/42/75/49/427549f6f22470ff93ca714479d180c2.jpg" class="icon" alt="Facebook"
-                        style="width: 30px; height: 30px;">
+                    <img src="https://i.pinimg.com/736x/42/75/49/427549f6f22470ff93ca714479d180c2.jpg" class="icon"
+                        alt="Facebook" style="width: 30px; height: 30px;">
                 </a>
                 <a href="https://www.instagram.com/nest_tourism_s_s_rajiv/" target="_blank" class="link" title="Instagram">
                     <img src="https://png.pngtree.com/png-clipart/20180626/ourmid/pngtree-instagram-icon-instagram-logo-png-image_3584852.png"
@@ -422,11 +442,10 @@
             </div>
             <!-- 3. Optional Additions -->
             <div style="text-align: center; font-size: 14px; margin-top: 10px;">
-                <a href="./tm_terms.html" class="link" style="margin: 0 10px;">Terms & Conditions</a> |
-                <a href="./tm_privacy.html" class="link" style="margin: 0 10px;">Privacy Policy</a> |
-                <a href="./tm_faq.html" class="link" style="margin: 0 10px;">FAQ</a>
-            </div>
+                <a href=".\terms.html" class="link" style="margin: 0 10px;">Terms & Conditions</a> |
+                <a href=".\privacy.html" class="link" style="margin: 0 10px;">Privacy Policy</a> |
+                <a href=".\faq.html" class="link" style="margin: 0 10px;">FAQ</a>
+            </div>  
         </div>
-</body>
-
+    </body>
 </html>

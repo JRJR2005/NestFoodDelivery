@@ -12,21 +12,17 @@
         html{
             scroll-behavior: smooth;
         }
-        .banner{
-            background-image: url("https://www.kitchenking.in/wp-content/uploads/2021/08/Signoraware-Best-Steel-Innovative-Lunch-Box.png");
-            background-position: center;
-            background-size: cover;
-            width: 100%;
-            height: 90%;
-            border-radius: 10px;
-            align-items: center;
-            align-content: center;
-            margin-top: 10px;
-        }
         .logo{
             display: flex;
             flex-direction: row;
             padding: 10px;
+        }
+        .logoImg{
+            border-radius: 30px;
+            border-width: medium;
+            border-style: groove;
+            width:70px; 
+            height:70px;
         }
         .header{
             background-color: white;
@@ -44,14 +40,58 @@
         .body{
             padding: 5px;
         }
+        .container {
+            width: 58%;
+            padding: 10px;
+            text-align: justify;
+        }
+
+        .img {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 50px;
+        }
+
+        .about-image {
+            width: 40%;
+        }
+        .about,.service,.contact{
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: space-between;
+            box-shadow: 2px 2px 10px black;
+            padding: 10px;
+            width: 99%;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            scroll-margin-top: 150px;
+        }
+        .contactContainer{
+            width: 100%;
+            padding: 10px;
+            text-align: justify;
+            line-height: 20px;
+            font-size: 17px;
+        }
+        .cardholder{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            align-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+        }
         .card2{
             box-shadow: 2px 2px 5px black;
             margin-right: 20px;
             margin-left: 20px;
             margin-top: 20px;
-            padding: 15px;
+            padding: 10px;
+            width: 96%;
             line-height: 23px;
-            text-align: justify ;
             border-radius: 10px;
         }
         a{
@@ -60,13 +100,13 @@
         }
         h4{
             text-align: left;
-            font-size: larger;
-            color: darkgreen;
             text-transform: uppercase;
         }
-        p,li{
-            line-height: 25px;
-            font-size: 16px;
+        h1{
+            font-size: 23px;
+        }
+        p{
+            line-height: 20px;
         }
         .followUs{
             text-align: center;
@@ -92,23 +132,241 @@
             height: 38px;
             border-radius: 50px;
         }
+        .bold{
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        .drawerIcon{
+                width: 60px;
+                height: 60px;
+                border-radius: 50px;
+                margin-right: 20px;
+                visibility: visible;
+                transition: width 1s, height 1s;
+        }
+        .drawerIcon:hover{
+            box-shadow: 2px 2px 8px black;
+            visibility: visible;
+        }
+        .drawerContainer{
+            display: flex;
+            justify-content: flex-end;
+            visibility: hidden;
+        }
+        .drawerHeader{
+            background-color: white;
+            width: 96%;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px black;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .menu{
+            position: absolute;
+            backface-visibility: hidden;
+            right: 5px;
+            top: 100px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;    
+            margin: 10px;
+            align-items: center;
+            width: 30%;
+            background-color: rgba(255, 255, 255, 0.527);
+            box-shadow: 2px 2px 10px black;
+            border-radius: 10px;
+        }
+        .dev{
+            background-color: white;
+            width: 96%;
+            padding: 5px;
+            border-radius: 10px;
+            border-width: thin;
+            border-style: ridge;
+        }
+        .devinfo{
+                color: darkblue;
+                font-size: 14px;
+        }
+        .button{
+            width: 90%;
+            font-size: 16px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 5px;
+            font-weight: bold;
+            color: darkblue;
+            border-color: darkblue;
+            border-bottom: 2px solid black;
+            margin-bottom: 2px;
+            text-align: center;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        .button:hover{
+            box-shadow: 2px 2px 5px black;
+        }
         @media (max-width: 768px) {
-            p,li,a{
-                font-size: 9px;
-                line-height: 14px;
+            p,li{
+                font-size: 8px;
+                line-height: 13px;
             }
             h4{
-                font-size: 10px;
+                font-size: 9px;
             }
             h2{
-                font-size: 12px;
+                font-size: 10px;
             }
             .link{
                 font-size: 10px;
             }
+            .logo{
+                justify-content: center;
+                align-items: center;
+            }
+            h1{
+                font-size: 12px;
+            }
+            .button{
+                font-size: 8px;
+                border-width: 2px;
+            }
+            .banner{
+                height: 50%;
+                aspect-ratio: 4 / 3;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                justify-content: center;
+            }
+            .logoImg{
+                border-radius: 20px;
+                width: 20px;
+                height: 20px;
+            }
+            .card,.card2{
+                font-size: 10px;
+                line-height: 12px;
+                width: 100%;
+            }
+            .about,.service,.contact{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 95%;
+                scroll-margin-top: 70px;
+            }
+            .bold,b{
+                font-size: 10px;
+            }
+            .container{
+                width: 95%;
+            }
+            .logoImg{
+                width: 20px;
+                height: 20px;
+            }
+            .drawerIcon{
+                width: 35px;
+                height: 35px;
+            }
+            .drawerContainer{
+                display: flex;
+                justify-content: flex-end;
+                visibility: hidden;
+            }
+            .drawerHeader{
+                background-color: white;
+                width: 96%;
+                border-radius: 10px;
+                box-shadow: 2px 2px 2px black;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 5px;
+                margin-bottom: 10px;
+            }
+            .menu{
+                right: 0px;
+                top: 50px;
+                width: 70%;
+            }
+            .devinfo{
+                color: darkblue;
+                font-size: 10px;
+            }
+            h5{
+                font-size: 10px;
+            }
+            .owner{
+                font-size: 12px;
+                text-align: center;
+            }
+            .headerTitle{
+                font-size: 10   px;
+            }
+            .img{
+                margin-top: 0px;
+            }
         }
     </style>
     <body id="home">
+            <!-- start of header section -->
+    <div class="header">
+        <div class="logo">
+            <img src=".\Logo.jpeg" class="logoImg">
+            <h1>நெஸ்ட் ஃபூட் டெலிவரி</h1>
+        </div>
+        <script>
+            function Drawer() {
+                const drawer = document.getElementById("drawer");
+                if (drawer.style.visibility === "visible") {
+                    drawer.style.visibility = "hidden";
+                }
+                else {
+                    drawer.style.visibility = "visible";
+                }
+            }
+            function Tamil() {
+                const tamil = document.getElementById("isChecked");
+                if (tamil.checked == false) {
+                    window.location.href = "./terms.html";
+                }
+                else {
+                    window.location.href = "./tm_terms.html";
+                }
+            }
+        </script>
+        <div class="drawerContainer" id="drawer">
+            <img src="./menu.jpg" class="drawerIcon" onclick="Drawer()">
+            <div class="menu">
+                <div class="drawerHeader">
+                    <img src=".\Logo.jpeg" class="logoImg">
+                    <h2>Nest Food Delivery</h2>
+                    <div
+                        style="display: flex;flex-direction: row;justify-content: center;align-items: center; margin-left: 10%;">
+                        <input type="checkbox" id="isChecked" checked onchange="Tamil()">
+                        <h5>தமிழுக்கு</h5>
+                    </div>
+                </div>
+                <a href="./tamil.html" class="button">Home</a>
+                <a href="./tm_about.html" class="button">About</a>
+                <a href="./tm_service.html" class="button">Service</a>
+                <a href="./tm_contact.html" class="button">Contact</a>
+                <a href="./Print Udyam Registration Certificate.pdf" class="button">Udyam Certificate</a>
+                <h4>GSTIN : 33BLVPS5767D1ZH</h4>
+                <div class="dev">
+                    <h5 class="devinfo">Developed By,<br>🧑‍💻 J. Rosan John Redsin BCA<br>📲 8754558543<br>📩
+                        jrjr1405.player@gmail.com<br>🏠 Jafferkhanpet, Chennai-83</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of header section -->
         <div class="card2">
             <h2>விதிமுறைகள் மற்றும் நிபந்தனைகள் – நெஸ்ட் உணவு டெலிவரி</h2>
             <p><strong>இறுதி புதுப்பிப்பு:</strong> மே 15, 2025</p>
