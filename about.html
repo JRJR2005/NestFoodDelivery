@@ -11,442 +11,440 @@
         <meta property="og:type" content="website">
         <title>Nest Food Delivery - About Us</title>
     </head>
-    <style>
-        body{
-            padding: 5px;
-        }
-        html{
-            scroll-behavior: smooth;
-        }
-        .banner{
-            background-image: url("./banner.png");
-            background-position: center;
-            background-size: cover;
-            width: 100%;
-            height: 110%;
-            max-height: 150%;
-            border-radius: 10px;
-            align-items: center;
-            align-content: center;
-            margin-top: 10px;
-        }
-        .logo{
-            display: flex;
-            flex-direction: row;
-            padding: 10px;
-        }
-        .logoImg{
-            border-radius: 30px;
-            border-width: medium;
-            border-style: groove;
-            width:70px; 
-            height:70px;
-        }
-        .header{
-            background-color: white;
-            align-items: center;
-            align-content: center;
-            justify-content: space-between;
-            display: flex;
-            flex-direction: row;
-            box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            position: sticky;
-            top: 0px;
-        }
-        .body{
-            padding: 5px;
-        }
-        .container {
-            width: 58%;
-            padding: 10px;
-            text-align: justify;
-        }
-
-        .img {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        .about-image {
-            width: 40%;
-        }
-        .about,.service,.contact{
-            border-radius: 10px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-content: space-between;
-            box-shadow: 2px 2px 10px black;
-            padding: 10px;
-            width: 99%;
-            margin-top: 10px;
-            margin-bottom: 20px;
-            scroll-margin-top: 150px;
-        }
-        .contactContainer{
-            width: 100%;
-            padding: 10px;
-            text-align: justify;
-            line-height: 20px;
-            font-size: 17px;
-        }
-        .cardholder{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            align-content: space-between;
-            flex-wrap: wrap;
-            width: 100%;
-        }
-        .card{
-            box-shadow: 2px 2px 5px black;
-            margin-right: 20px;
-            margin-left: 20px;
-            margin-top: 20px;
-            padding: 10px;
-            width: 40%;
-            line-height: 23px;
-            border-radius: 10px;
-        }
-        .card2{
-            box-shadow: 2px 2px 5px black;
-            margin-right: 20px;
-            margin-left: 20px;
-            margin-top: 20px;
-            padding: 10px;
-            width: 40%;
-            line-height: 23px;
-            border-radius: 10px;
-        }
-        a{
-            color: black;
-            text-decoration: none;
-        }
-        h4{
-            text-align: center;
-        }
-        p{
-            line-height: 20px;
-        }
-        .img{
-            height: 80%;
-        }
-        .followUs{
-            text-align: center;
-            padding: 10px;
-            color: darkgreen;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        .link{
-            justify-content: space-between;
-            align-content: center;
-            align-items: center;
-            font-size: large;
-            padding: 5px;
-        }
-        .link:hover{
-            box-shadow: 1px 1px 5px black;
-            border-radius: 20px;
-        }
-        .icon{
-            width: 38px;    
-            height: 38px;
-            border-radius: 50px;
-        }
-        .bold{
-            font-size: 18px;
-            text-transform: uppercase;
-        }
-        .drawerIcon{
-                width: 60px;
-                height: 60px;
-                border-radius: 50px;
-                margin-right: 20px;
-                visibility: visible;
-                transition: width 1s, height 1s;
-        }
-        .drawerIcon:hover{
-            box-shadow: 2px 2px 8px black;
-            visibility: visible;
-        }
-        .drawerContainer{
-            display: flex;
-            justify-content: flex-end;
-            visibility: hidden;
-        }
-        .drawerHeader{
-            background-color: white;
-            width: 96%;
-            border-radius: 10px;
-            box-shadow: 2px 2px 2px black;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            padding: 5px;
-            margin-bottom: 10px;
-        }
-        .menu{
-            position: absolute;
-            backface-visibility: hidden;
-            right: 5px;
-            top: 100px;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;    
-            margin: 10px;
-            align-items: center;
-            width: 30%;
-            background-color: rgba(255, 255, 255, 0.527);
-            box-shadow: 2px 2px 10px black;
-            border-radius: 10px;
-        }
-        .dev{
-            background-color: white;
-            width: 96%;
-            padding: 5px;
-            border-radius: 10px;
-            border-width: thin;
-            border-style: ridge;
-        }
-        .devinfo{
-                color: darkblue;
-                font-size: 14px;
-        }
-        .button{
-            width: 90%;
-            font-size: 16px;
-            background-color: white;
-            border-radius: 10px;
-            padding: 5px;
-            font-weight: bold;
-            color: darkblue;
-            border-color: darkblue;
-            border-bottom: 2px solid black;
-            margin-bottom: 2px;
-            text-align: center;
-            font-size: 18px;
-            text-decoration: none;
-        }
-        .button:hover{
-            box-shadow: 2px 2px 5px black;
-        }
-        @media (max-width: 768px) {
-            p,li{
-                font-size: 10px;
-                line-height: 12px;
-            }
-            h4{
-                font-size: 12px;
-            }
-            h2{
-                font-size: 14px;
-            }
-            .link{
-                font-size: 12px;
-            }
-            h1{
-                font-size: 12px;
-            }
-            .button{
-                font-size: 10px;
-                border-width: 2px;
-            }
-            .banner{
-                height: 50%;
-                aspect-ratio: 4 / 3;
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-                justify-content: center;
-            }
-            .logo{
-                justify-content: center;
-                align-items: center;
-            }
-            .logoImg{
-                border-radius: 20px;
-                width: 20px;
-                height: 20px;
-            }
-            .card,.card2{
-                font-size: 10px;
-                line-height: 12px;
-                width: 100%;
-            }
-            .about,.service,.contact{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                width: 95%;
-                scroll-margin-top: 70px;
-            }
-            .bold{
-                font-size: 10px;
-            }
-            .container{
-                width: 95%;
-            }
-            .logoImg{
-                width: 20px;
-                height: 20px;
-            }
-            .drawerIcon{
-                width: 35px;
-                height: 35px;
-            }
-            .drawerContainer{
-                display: flex;
-                justify-content: flex-end;
-                visibility: hidden;
-            }
-            .drawerHeader{
-                background-color: white;
-                width: 96%;
-                border-radius: 10px;
-                box-shadow: 2px 2px 2px black;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                padding: 5px;
-                margin-bottom: 10px;
-            }
-            .menu{
-                right: 0px;
-                top: 50px;
-                width: 70%;
-            }
-            .devinfo{
-                color: darkblue;
-                font-size: 10px;
-            }
-            h5{
-                font-size: 10px;
-            }
-            .owner{
-                font-size: 12px;
-                text-align: center;
-            }
-        }
-    </style>
-    <body id="home">
-        <!-- start of header section -->
-        <div class="header">
-            <div class="logo">
-                <img src=".\Logo.jpeg" class="logoImg">
-                <h1>Nest Food Delivery</h1>
-            </div>
-            <script>
-                function Drawer(){
-                    const drawer = document.getElementById("drawer");
-                    if (drawer.style.visibility === "visible"){
-                        drawer.style.visibility = "hidden";
-                    }
-                    else{
-                        drawer.style.visibility = "visible";
-                    }
-                }
-                function Tamil(){
-                    const tamil = document.getElementById("isChecked");
-                    if(tamil.checked == true){
-                        window.location.href = "./tm_about.html";
-                    }
-                    else{
-                        window.location.href = "./about.html";
-                    }
-                }
-            </script>
-        <div class="drawerContainer" id="drawer">
-            <img src="./menu.jpg" class="drawerIcon" onclick="Drawer()">
-            <div class="menu">
-                <div class="drawerHeader">
-                    <img src=".\Logo.jpeg" class="logoImg">
-                    <h2>Nest Food Delivery</h2>
-                    <div style="display: flex;flex-direction: row;justify-content: center;align-items: center; margin-left: 10%;">
-                        <input type="checkbox" id="isChecked" onchange="Tamil()">
-                        <h5>தமிழுக்கு</h5>
-                    </div>
-                </div>
-                <a href="./index.html" class="button">Home</a>
-                <a href="./about.html" class="button">About</a>
-                <a href="./service.html" class="button">Service</a>
-                <a href="./contact.html" class="button">Contact</a>
-
-
-                <div class="dev">
-                    <h5 class="devinfo">Developed By,<br>🧑‍💻 J. Rosan John Redsin BCA<br>📲 8754558543<br>📩 jrjr1405.player@gmail.com<br>🏠 Jafferkhanpet, Chennai-83</h5>
-                </div>
-            </div>
-        </div>
-        </div>
-        <!-- end of header section -->
-                    <!-- start of body about section -->
-            <div class="about" id="about">
-                <div class="container">
-                    <h2>About Us,</h2>
-                    <h3 class="owner"></h3>
-                    <p><b class="bold">Bridging Kitchens and Communities, One Meal at a Time.</b><br>
-                        At <b>Nest Food Delivery</b>, we redefine convenience by delivering delicious meals where they’re needed most, whether it’s
-                        from your favorite hotel to your home, or from your home kitchen straight to institutions.<br>
-                        Founded with a vision to make food delivery more personal and versatile, we’re not just a delivery service, we’re your
-                        everyday food connection. We understand that food isn’t just about eating, it’s about care, comfort, and connection.<br>
-                        <b style="padding-left: 20px;"> 🍽️ Hotel-to-Home Delivery</b> – Bringing restaurant-quality meals to your doorstep, fresh and fast.<br>
-                        <b style="padding-left: 20px;"> 🍚 Home-to-Institution Delivery</b> – Connecting home chefs and families to deliver homemade meals to schools.<br>
-                        <b class="bold">What Sets Us Apart?</b><br>
-                        <b style="padding-left: 20px;"> ➡️ Dual-Side Food Delivery:</b> Supporting both professional kitchens and home kitchens.<br>
-                        <b style="padding-left: 20px;"> ➡️ Timely & Safe:</b> Every delivery is handled with care, hygiene, and punctuality.<br>
-                        <b style="padding-left: 20px;"> ➡️ Real-Time Tracking:</b> Know where your food is at all times.<br>
-                        <b style="padding-left: 20px;"> ➡️ Empowering Local Cooks:</b> Helping home chefs reach more people and grow their impact.<br>
-                        Whether you’re ordering a gourmet dinner or sending a home-cooked lunch to your child’s school, <b><i>Nest Food Delivery</i></b> makes sure every meal arrives with warmth and reliability.<br>
-                        <b class="bold">Connecting kitchens to hearts, one delivery at a time.</b>
-                    </p>
-                    <!-- Mission & Vision -->
-                    <p>
-                        <b class="bold">🌟 Our Mission</b><br>
-                        To empower communities by delivering food that nourishes both body and soul — connecting professional kitchens and
-                        home chefs to those in need of reliable, heartfelt meals.
-                        <br><br>
-                        <b class="bold">🌍 Our Vision</b><br>
-                        To become the most trusted and inclusive food delivery network that bridges households, institutions, and
-                        restaurants, creating a world where every meal is a shared connection.                    </p>
-                </div>
-                <div class="about-image">
-                    <img src="./about character.png" class="img">
-                </div>
-            </div>
-            <!-- end of body about section -->
-                     <!-- start of footer section -->
-        <div class="footer">
-            <!-- 1. Copyright -->
-            <p style="text-align: center; border-radius: 10px; padding: 10px; background-color: #f5f5f5; font-weight: bold;">
-                © 2025 Nest Food Delivery. All rights reserved.
+<style>
+:root {
+    --primary: #03460c;
+    --dark: #1e293b;
+    --light: #f8fafc;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+body {
+    background: linear-gradient(180deg, #fff, #f8fafc);
+    color: var(--dark);
+}
+/* ---------- HEADER ---------- */
+header {
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    z-index: 10;
+}
+header img {
+    width: 48px;
+    border-radius: 12px;
+}
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--dark);
+}
+.body{
+    padding: 5px;
+}
+.about-section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 40px;
+}
+.about-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.about-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+}
+.about-hero p {
+  font-size: 1.1rem;
+  color: #475569;
+}
+.about-block {
+  margin-bottom: 60px;
+}
+.about-block h2 {
+  font-size: 1.9rem;
+  margin-bottom: 16px;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+.about-card {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+.about-card:hover {
+    transform: translateY(-6px);
+}
+.about-card h3 {
+  margin-bottom: 8px;
+}
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.about-points li {
+  margin-bottom: 10px;
+}
+.future {
+  background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+  padding: 40px;
+  border-radius: 20px;
+}
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    opacity: 0.7;
+    background-color: rgba(187, 187, 187, 0.473);
+    color: black;
+    padding: 10px;
+}
+/* ---------- SOCIAL MEDIA ---------- */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+.icon:hover {
+    transform: scale(1.2);
+}
+.dev {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px 5px;
+    font-size: 0.85rem;
+}
+/* ---------- VISUAL STORY LAYOUT ---------- */
+.visual-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+.visual-block.reverse {
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+}
+.visual-block.reverse > * {
+    direction: ltr;
+}
+.visual-image {
+    background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+.visual-image img {
+    width: 100%;
+    max-width: 320px;
+    opacity: 0.95;
+}
+.trust-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+.trust-strip span {
+    background: #ecfdf5;
+    color: var(--primary);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+/* ---------- FOUNDER NOTE ---------- */
+.founder-note {
+    margin: 80px auto;
+    max-width: 800px;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+.founder-note p {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 16px;
+}
+.founder-note span {
+    font-weight: 600;
+    color: var(--primary);
+}
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    .visual-block,
+    .visual-block.reverse {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) {
+    p,li{
+        font-size: 10px;
+        line-height: 12px;
+    }
+    h4{
+        font-size: 12px;
+    }
+    h2{
+        font-size: 14px;
+    }    
+    .link{
+        font-size: 12px;
+    }
+    h1{
+        font-size: 12px;
+    }
+    .logo{
+        justify-content: center;
+        align-items: center;
+    }
+    .logoImg{
+        border-radius: 20px;
+        width: 20px;
+        height: 20px;
+    }
+    .about{        
+        display: flex;
+        gap: 40px;
+        padding: 60px 40px;
+        max-width: 1200px;
+        margin: auto;
+    }
+    .bold{
+        font-size: 10px;
+    }
+    .container{
+        width: 95%;
+    }
+    h5{
+        font-size: 10px;
+    }
+    .owner{
+        font-size: 12px;
+        text-align: center;
+    }
+}
+</style>
+<body id="home">
+    <!-- start of header section -->
+    <header>
+    <div style="display:flex;align-items:center;gap:10px">
+        <img src="./Logo.jpeg">
+        <strong>Nest Food Delivery</strong>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="service.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    </header>
+    <!-- end of header section -->
+    <!-- start of body about section -->
+<section class="about-section">
+  <!-- HERO INTRO -->
+  <div class="about-hero">
+    <h1>Care in Every Delivery</h1>
+    <p>
+      Nest Food Delivery is building a reliable, people-first delivery ecosystem
+      that connects homes, schools, hotels, and communities.
+    </p>
+  </div>
+  <!-- OUR STORY -->
+<div class="visual-block">
+  <div class="visual-image">
+    <!-- Replace image later -->
+    <img src="./about-story.png" alt="Nest delivery ecosystem">
+  </div>
+  <div class="about-block">
+  <h2>Our Story</h2>
+  <p>
+    Nest Food Delivery began with a simple but powerful realization —
+    modern delivery systems optimize for speed, but often forget care.
+  </p>
+  <p>
+    Parents needed a safe way to send home-cooked meals to schools.
+    Hotels needed dependable riders they could trust.
+    Customers wanted clarity, not confusion.
+  </p>
+  <p>
+    What started as a local solution in Nagercoil evolved into a broader vision —
+    to build a delivery network rooted in
+    <strong>accountability, human values, and long-term reliability</strong>.
+  </p>
+  <p>
+    Nest Food Delivery is not built to chase volume.
+    It is built to earn trust — one delivery at a time.
+  </p>
+  </div>
+</div>
+  <!-- ECOSYSTEM -->
+<div class="visual-block reverse">
+  <div class="visual-image">
+    <img src="./about-ecosystem.png" alt="Nest ecosystem illustration">
+  </div>
+  <div class="about-block">
+  <h2>Our Ecosystem</h2>
+  <div class="about-grid">
+    <div class="about-card">
+      <h3>🍱 ClassPort</h3>
+      <p>
+        A home-to-school food delivery system designed for parents who prioritize
+        hygiene, punctuality, and their child’s well-being.
+      </p>
+      <p>
+        ClassPort ensures meals prepared at home reach schools safely,
+        handled by verified riders with real-time tracking and accountability.
+      </p>
+    </div>
+    <div class="about-card">
+      <h3>🍔 MealNest</h3>
+      <p>
+        A hotel-to-home food delivery platform that supports local restaurants
+        while maintaining quality and transparency.
+      </p>
+      <p>
+        Hotels gain reliable logistics, riders earn fairly,
+        and customers enjoy consistent service — all within a trusted local network.
+      </p>
+    </div>
+    <div class="about-card">
+      <h3>🚚 VIPick</h3>
+      <p>
+        <strong>VIPick is a smart pickup & delivery marketplace platform</strong>,
+      </p>
+      <p>
+        Verified sellers or platform admins can list products for a limited time.
+        Orders are fulfilled through trusted courier-style delivery,
+        ensuring secure, trackable, and time-bound fulfillment.
+      </p>
+      <p>
+        VIPick is designed for controlled logistics, trusted sellers,
+        and structured order handling — starting locally and scaling gradually.
+      </p>
+    </div>
+  </div>
+  </div>
+</div>
+  <!-- MISSION & VISION -->
+<div class="visual-block">
+    <div class="visual-image">
+        <img src="./about-vision.png" alt="Future expansion illustration">
+    </div>
+    <div class="about-block split">
+        <div>
+            <h2>Our Mission</h2>
+            <p>
+            To build a responsible delivery system that prioritizes safety,
+            dignity, and trust — empowering families, partners, and riders
+            through reliable local logistics.
             </p>
-            <!-- 2. Social Media Links -->
-            <div style="display: flex; justify-content: center; gap: 20px; padding: 10px;">
-                <a href="https://www.facebook.com/NESTTOURISMNAGERCOIL" target="_blank" class="link" title="Facebook">
-                    <img src="https://i.pinimg.com/736x/42/75/49/427549f6f22470ff93ca714479d180c2.jpg" class="icon"
-                        alt="Facebook" style="width: 30px; height: 30px;">
-                </a>
-                <a href="https://www.instagram.com/nest_tourism_s_s_rajiv/" target="_blank" class="link" title="Instagram">
-                    <img src="https://png.pngtree.com/png-clipart/20180626/ourmid/pngtree-instagram-icon-instagram-logo-png-image_3584852.png"
-                        class="icon" alt="Instagram" style="width: 30px; height: 30px;">
-                </a>
-                <a href="https://wa.me/9159158227" target="_blank" class="link" title="Chat on WhatsApp">
-                    <img src="https://static.vecteezy.com/system/resources/thumbnails/029/204/552/small_2x/phone-icon-3d-rendering-png.png"
-                        class="icon" alt="WhatsApp" style="width: 30px; height: 30px;">
-                </a>
-            </div>
-            <!-- 3. Optional Additions -->
-            <div style="text-align: center; font-size: 14px; margin-top: 10px;">
-                <a href=".\terms.html" class="link" style="margin: 0 10px;">Terms & Conditions</a> |
-                <a href=".\privacy.html" class="link" style="margin: 0 10px;">Privacy Policy</a> |
-                <a href=".\faq.html" class="link" style="margin: 0 10px;">FAQ</a>
-            </div>  
+        </div>
+        <div>
+            <h2>Our Vision</h2>
+            <p>
+            To become a trusted, community-driven delivery infrastructure
+            that scales city by city, starting from strong local foundations
+            rather than uncontrolled expansion.
+            </p>
+        </div>
+    </div>
+</div>
+  <!-- WHY IT MATTERS -->
+  <div class="about-block">
+    <h2>Why Nest Food Delivery Matters</h2>
+    <ul class="about-points">
+        <li>✔ Built for families, institutions, and local businesses</li>
+        <li>✔ Focuses on trust, not just transaction volume</li>
+        <li>✔ Supports verified riders and local partners</li>
+        <li>✔ Designed for real-world logistics challenges</li>
+        <li>✔ Scales responsibly, without compromising service quality</li>
+    </ul>
+    <div class="trust-strip">
+        <span>✔ Verified Riders</span>
+        <span>✔ Local Partnerships</span>
+        <span>✔ Real-Time Tracking</span>
+        <span>✔ Community First</span>
+    </div>
+  </div>
+<div class="founder-note">
+  <p>
+    “Nest is built with the belief that trust is infrastructure.
+    We are solving delivery the hard way — responsibly, locally,
+    and with people at the center.”
+  </p>
+  <span>— Founder, Nest Food Delivery</span>
+</div>
+  <!-- FUTURE -->
+  <div class="about-block future">
+    <h2>The Road Ahead</h2>
+    <p>
+        Currently operating within <strong>Nagercoil district</strong>,
+        Nest Food Delivery is strengthening its core systems,
+        partner relationships, and operational reliability.
+    </p>
+    <p>
+        In the future, we plan to expand service areas thoughtfully —
+        supported by smart logistics, automated settlements,
+        real-time analytics, and mobile-first tools for all stakeholders.
+    </p>
+    <p>
+        This is not just a delivery application.
+        <strong>This is long-term infrastructure for everyday trust.</strong>
+    </p>
+  </div>
+</section>
+<!-- end of body about section -->
+<!-- start of footer section -->
+<div class="footer">
+    <!-- 1. Copyright -->
+    <p style="text-align: center; border-radius: 10px; padding: 10px; background-color: #f5f5f5; font-weight: bold;">© 2025 Nest Food Delivery. All rights reserved.</p>
+<!-- 2. Social Media Links -->
+<div class="social-links">
+    <a href="https://www.facebook.com/NESTTOURISMNAGERCOIL" target="_blank" class="link" title="Facebook">
+        <img src="https://i.pinimg.com/736x/42/75/49/427549f6f22470ff93ca714479d180c2.jpg" class="icon" alt="Facebook" style="width: 30px; height: 30px;">
+    </a>
+    <a href="https://www.instagram.com/nest_tourism_s_s_rajiv/" target="_blank" class="link" title="Instagram">
+        <img src="https://png.pngtree.com/png-clipart/20180626/ourmid/pngtree-instagram-icon-instagram-logo-png-image_3584852.png" class="icon" alt="Instagram" style="width: 30px; height: 30px;">
+    </a>
+    <a href="https://wa.me/9159158227" target="_blank" class="link" title="Chat on WhatsApp">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/029/204/552/small_2x/phone-icon-3d-rendering-png.png" class="icon" alt="WhatsApp" style="width: 30px; height: 30px;">
+    </a>
+</div>
+<div class="dev">
+    <h5 class="devinfo">Developed & Designed By,🧑‍💻 J. Rosan John Redsin|📲 8754558543|📩 jrjr1405.player@gmail.com|🏠 Jafferkhanpet, Chennai-83</h5>
+</div>
         </div>
     </body>
 </html>
