@@ -2,224 +2,180 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Nest Food Delivery - Care in Every Delivery">
-    <meta name="keywords" content="food delivery, food delivery at Nagercoil, breakfast, lunch, dinner, home to institute delivery, hotel to home delivery, Nest Lunch Delivery, school lunch delivery">
+    <meta name="keywords" content="food delivery contact, Nest Food Delivery contact information, food delivery at Nagercoil, breakfast, lunch, dinner, home to institute delivery, hotel to home delivery, Nest Lunch Delivery, school lunch delivery">
     <meta name="author" content="Nest Food Delivery - JRJR">
     <meta property="og:title" content="Nest Food Delivery">
     <meta property="og:description" content="Care in Every Delivery - Fast, reliable breakfast, lunch and dinner delivery service.">
     <title>Nest Food Delivery - Contact Us</title>
 </head>
 <style>
-    body {
-        padding: 5px;
+:root {
+    --primary: #03460c;
+    --dark: #1e293b;
+    --light: #f8fafc;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+body {
+    background: linear-gradient(180deg, #fff, #f8fafc);
+    color: var(--dark);
+}
+/* ---------- HEADER ---------- */
+header {
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    z-index: 10;
+}
+header img {
+    width: 48px;
+    border-radius: 12px;
+}
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--dark);
+}
+/* CONTACT HERO */
+.contact-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+.contact-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.contact-hero p {
+    color: #475569;
+    font-size: 1.1rem;
+}
+/* CONTACT SECTION */
+.contact-section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px 80px;
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 24px;
+}
+/* Smooth entrance animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
-
-    html {
-        scroll-behavior: smooth;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
-    .logo {
-        display: flex;
-        flex-direction: row;
-        padding: 10px;
+}
+.contact-card {
+    animation: fadeUp 0.8s ease forwards;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    border-radius: 20px;
+    padding: 10px;
+}
+/* Stagger effect */
+.contact-card:nth-child(1) { animation-delay: 0.1s; }
+.contact-card:nth-child(2) { animation-delay: 0.2s; }
+.contact-card:nth-child(3) { animation-delay: 0.3s; }
+.contact-card:nth-child(4) { animation-delay: 0.4s; }
+/* Hover lift */
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+}
+/* Highlight card – NO BORDER */
+.contact-card.highlight {
+    box-shadow: 0 0 0 0 rgba(3,70,12,0.4);
+    animation: pulseGlow 2.5s infinite;
+}
+/* Pulse glow */
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(3,70,12,0.35);
     }
-    .logoImg {
-        border-radius: 30px;
-        border-width: medium;
-        border-style: groove;
-        width: 70px;
-        height: 70px;
+    70% {
+        box-shadow: 0 0 0 14px rgba(3,70,12,0);
     }
-    .header {
-        background-color: white;
-        align-items: center;
-        align-content: center;
-        justify-content: space-between;
-        display: flex;
-        flex-direction: row;
-        box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        position: sticky;
-        top: 0px;
+    100% {
+        box-shadow: 0 0 0 0 rgba(3,70,12,0);
     }
-    .body {
-        padding: 5px;
+}
+.contact-card h3 {
+    margin-bottom: 10px;
+}
+.contact-card .soft {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+.contact-card.highlight {
+    border: 1px solid grey;
+}
+.cta {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: var(--primary);
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+}
+.contact-footer-note {
+    text-align: center;
+    margin-top: 50px;
+    color: #475569;
+}
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    opacity: 0.7;
+    background-color: rgba(187, 187, 187, 0.473);
+    color: black;
+    padding: 10px;
+}
+/* ---------- SOCIAL MEDIA ---------- */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+.icon:hover {
+    transform: scale(1.2);
+}
+.dev {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px 5px;
+    font-size: 0.85rem;
+}
+@media (max-width: 768px) {
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
     }
-    .container {
-        width: 58%;
-        padding: 10px;
-        text-align: justify;
-    }
-    .img {
-        width: 100%;
-        border-radius: 8px;
-    }
-    .about-image {
-        width: 40%;
-    }
-    .about,.service,.contact {
-        border-radius: 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-content: space-between;
-        box-shadow: 2px 2px 10px black;
-        padding: 10px;
-        width: 99%;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        scroll-margin-top: 150px;
-    }
-    .contactContainer {
-        width: 100%;
-        padding: 10px;
-        text-align: justify;
-        line-height: 20px;
-        font-size: 17px;
-    }
-    .cardholder {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        align-content: space-between;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-    .card {
-        box-shadow: 2px 2px 5px black;
-        margin-right: 20px;
-        margin-left: 20px;
-        margin-top: 20px;
-        padding: 10px;
-        width: 40%;
-        line-height: 23px;
-        border-radius: 10px;
-    }
-    .card2 {
-        box-shadow: 2px 2px 5px black;
-        margin-right: 20px;
-        margin-left: 20px;
-        margin-top: 20px;
-        padding: 10px;
-        width: 40%;
-        line-height: 23px;
-        border-radius: 10px;
-    }
-    a {
-        color: black;
-        text-decoration: none;
-    }
-    h4 {
-        text-align: center;
-    }
-    p {
-        line-height: 20px;
-    }
-    .img {
-        height: 80%;
-    }
-    .followUs {
-        text-align: center;
-        padding: 10px;
-        color: darkgreen;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .link {
-        justify-content: space-between;
-        align-content: center;
-        align-items: center;
-        font-size: large;
-        padding: 5px;
-    }
-    .link:hover {
-        box-shadow: 1px 1px 5px black;
-        border-radius: 20px;
-    }
-    .icon {
-        width: 38px;
-        height: 38px;
-        border-radius: 50px;
-    }
-    .bold {
-        font-size: 18px;
-        text-transform: uppercase;
-    }
-    .drawerIcon {
-        width: 60px;
-        height: 60px;
-        border-radius: 50px;
-        margin-right: 20px;
-        visibility: visible;
-        transition: width 1s, height 1s;
-    }
-    .drawerIcon:hover {
-        box-shadow: 2px 2px 8px black;
-        visibility: visible;
-    }
-    .drawerContainer {
-        display: flex;
-        justify-content: flex-end;
-        visibility: hidden;
-    }
-    .drawerHeader {
-        background-color: white;
-        width: 96%;
-        border-radius: 10px;
-        box-shadow: 2px 2px 2px black;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 5px;
-        margin-bottom: 10px;
-    }
-    .menu {
-        position: absolute;
-        backface-visibility: hidden;
-        right: 5px;
-        top: 100px;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        margin: 10px;
-        align-items: center;
-        width: 30%;
-        background-color: rgba(255, 255, 255, 0.527);
-        box-shadow: 2px 2px 10px black;
-        border-radius: 10px;
-    }
-    .dev {
-        background-color: white;
-        width: 96%;
-        padding: 5px;
-        border-radius: 10px;
-        border-width: thin;
-        border-style: ridge;
-    }
-    .devinfo {
-        color: darkblue;
-        font-size: 14px;
-    }
-    .button {
-        width: 90%;
-        font-size: 16px;
-        background-color: white;
-        border-radius: 10px;
-        padding: 5px;
-        font-weight: bold;
-        color: darkblue;
-        border-color: darkblue;
-        border-bottom: 2px solid black;
-        margin-bottom: 2px;
-        text-align: center;
-        font-size: 18px;
-        text-decoration: none;
-    }
-    .button:hover {
-        box-shadow: 2px 2px 5px black;
-    }
-    @media (max-width: 768px) {
         p,li {
             font-size: 10px;
             line-height: 12px;
@@ -319,148 +275,97 @@
         }
     }
 </style>
-
 <body id="home">
-    <!-- start of header section -->
-    <div class="header">
-        <div class="logo">
-            <img src=".\Logo.jpeg" class="logoImg">
-            <h1>Nest Food Delivery</h1>
-        </div>
-        <script>
-            function Drawer() {
-                const drawer = document.getElementById("drawer");
-                if (drawer.style.visibility === "visible") {
-                    drawer.style.visibility = "hidden";
-                }
-                else {
-                    drawer.style.visibility = "visible";
-                }
-            }
-            function Tamil() {
-                const tamil = document.getElementById("isChecked");
-                if (tamil.checked == true) {
-                    window.location.href = "./tm_contact.html";
-                }
-                else {
-                    window.location.href = "./contact.html";
-                }
-            }
-        </script>
-        <div class="drawerContainer" id="drawer">
-            <img src="./menu.jpg" class="drawerIcon" onclick="Drawer()">
-            <div class="menu">
-                <div class="drawerHeader">
-                    <img src=".\Logo.jpeg" class="logoImg">
-                    <h2>Nest Food Delivery</h2>
-                    <div
-                        style="display: flex;flex-direction: row;justify-content: center;align-items: center; margin-left: 10%;">
-                        <input type="checkbox" id="isChecked" onchange="Tamil()">
-                        <h5>தமிழுக்கு</h5>
-                    </div>
-                </div>
-                <a href="./index.html" class="button">Home</a>
-                <a href="./about.html" class="button">About</a>
-                <a href="./service.html" class="button">Service</a>
-                <a href="./contact.html" class="button">Contact</a>
-
-
-                <div class="dev">
-                    <h5 class="devinfo">Developed By,<br>🧑‍💻 J. Rosan John Redsin BCA<br>📲 8754558543<br>📩
-                        jrjr1405.player@gmail.com<br>🏠 Jafferkhanpet, Chennai-83</h5>
-                </div>
-            </div>
-        </div>
+<!-- start of header section -->
+<header>
+    <div style="display:flex;align-items:center;gap:10px">
+        <img src="asserts/Logo.jpeg" loading="lazy" >
+        <strong>Nest Food Delivery</strong>
     </div>
-    <!-- end of header section -->
-            <!-- start of body contact section -->
-            <div class="contact" id="contact">
-                <div class="contactContainer">
-                    <h2>Contact Us,</h2>
-                    <p>We’re Just a Message Away!<br>
-                    
-                    Have a question, need help with your order, or want to subscribe to our home-to-institution delivery plan? Our team is
-                    here to assist you with anything you need.<br></p>
-                    <div class="cardholder">
-
-                    <div class="card2">
-                        <h4>📞 Call or WhatsApp Us</h4>
-                        <p><strong>Phone:</strong><a href="callto:9159158227">+91-91591 58227</a></p>
-                        <p><strong>WhatsApp:</strong> Available from <strong>9:00 AM to 9:00 PM</strong>, Monday to Saturday</p>
-                        <p>Need help with your order, have a question about our services, or want to subscribe to our monthly
-                            home-to-institution plan? Just send us a message, we're quick to respond!</p>
-                        <p>📱 Save our number and chat with us directly on WhatsApp for instant support, subscription details. We’re always happy to help!</p>              
-                        </div>
-
-                    <div class="card2">
-                        <h4>📧 Email Us</h4>
-                        <p><strong>Support:</strong> <a href="mailto:nestrajiv6@gmail.com">nestrajiv6@gmail.com</a></p>
-                    
-                        <p>If you have detailed questions, feedback, business inquiries, or want to collaborate with us, feel free to drop
-                            us an email. We are here to assist you with everything from delivery concerns to subscription
-                            plans.</p>
-                    
-                        <p>🕒 We typically respond within <strong>24 hours</strong> during working days. Please include your name, contact
-                            number, and order or inquiry details (if applicable) to help us assist you faster.</p>              
-                        </div>
-                        <div class="card2">
-                            <h4>📍 Our Service Areas</h4>
-                            <p><strong>Currently available in:</strong><br>
-                                Nagercoil, Kanyakumari Dist</p>
-                            <p>We proudly serve these regions with timely and reliable food delivery services. Whether you're ordering a hot
-                                meal from your favorite hotel or sending a home-cooked lunch to a school, we've got you covered
-                                locally.</p>
-                            <p>
-                                We're committed to maintaining quality and speed in every delivery. By focusing on these areas, we ensure our
-                                service remains personal, efficient, and trusted.</p>
-                        </div>
-                        
-                    <div class="card2">
-                        <h4>📬 Our Office Address</h4>
-                        <p><strong>Nest Food Delivery</strong><br>
-                            219, Rajakkamangalam Road, Punnai Nagar,
-                            Nagercoil, Kanyakumari Dist,<br>
-                            Tamil Nadu - 629 004, India<br>
-                        <p>Feel free to visit us during working hours for service inquiries, partnership opportunities, or customer support.
-                            We’re always happy to connect with our community in person!</p>
-                        <p>🕒 <strong>Office Hours:</strong>
-                            Monday – Saturday, 10:00 AM to 6:00 PM</p>
-                    </div>
-                            </div><br>
-                                <p>You can also reach us via our app or website chat for instant assistance.<br>
-                                We love hearing from you, your feedback helps us deliver better every day!<br></p>
-                            </div>
-
-            </div>
-            <!-- end of body contact section -->
-                     <!-- start of footer section -->
-        <div class="footer">
-            <!-- 1. Copyright -->
-            <p style="text-align: center; border-radius: 10px; padding: 10px; background-color: #f5f5f5; font-weight: bold;">
-                © 2025 Nest Food Delivery. All rights reserved.
-            </p>
-            <!-- 2. Social Media Links -->
-            <div style="display: flex; justify-content: center; gap: 20px; padding: 10px;">
-                <a href="https://www.facebook.com/NESTTOURISMNAGERCOIL" target="_blank" class="link" title="Facebook">
-                    <img src="https://i.pinimg.com/736x/42/75/49/427549f6f22470ff93ca714479d180c2.jpg" class="icon"
-                        alt="Facebook" style="width: 30px; height: 30px;">
-                </a>
-                <a href="https://www.instagram.com/nest_tourism_s_s_rajiv/" target="_blank" class="link" title="Instagram">
-                    <img src="https://png.pngtree.com/png-clipart/20180626/ourmid/pngtree-instagram-icon-instagram-logo-png-image_3584852.png"
-                        class="icon" alt="Instagram" style="width: 30px; height: 30px;">
-                </a>
-                <a href="https://wa.me/9159158227" target="_blank" class="link" title="Chat on WhatsApp">
-                    <img src="https://static.vecteezy.com/system/resources/thumbnails/029/204/552/small_2x/phone-icon-3d-rendering-png.png"
-                        class="icon" alt="WhatsApp" style="width: 30px; height: 30px;">
-                </a>
-            </div>
-            <!-- 3. Optional Additions -->
-            <div style="text-align: center; font-size: 14px; margin-top: 10px;">
-                <a href=".\terms.html" class="link" style="margin: 0 10px;">Terms & Conditions</a> |
-                <a href=".\privacy.html" class="link" style="margin: 0 10px;">Privacy Policy</a> |
-                <a href=".\faq.html" class="link" style="margin: 0 10px;">FAQ</a>
-            </div>  
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="service.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+<!-- end of header section -->
+<!-- start of body contact section -->
+<section class="contact-hero">
+  <h1>Let’s Talk 🤝</h1>
+  <p>
+    Whether it’s an order, a question, or a partnership —
+    we’re always happy to hear from you.
+  </p>
+</section>
+<section class="contact-section" id="contact">
+  <div class="contact-grid">
+    <div class="contact-card highlight">
+      <h3>📞 Call / WhatsApp</h3>
+      <p><strong>+91 91591 58227</strong></p>
+      <p>
+        Available <strong>9:00 AM – 9:00 PM</strong><br>
+        Monday to Saturday
+      </p>
+      <p class="soft">
+        Fast support for orders, subscriptions & service help.
+      </p>
+      <a class="cta" href="https://wa.me/9159158227">Chat on WhatsApp</a>
+    </div>
+    <div class="contact-card highlight">
+      <h3>📧 Email Support</h3>
+      <p><strong>nestrajiv6@gmail.com</strong></p>
+      <p class="soft">
+        For detailed questions, feedback or partnerships.
+      </p>
+      <p>
+        ⏱️ Response within <strong>24 working hours</strong>
+      </p>
+    </div>
+    <div class="contact-card highlight">
+      <h3>📍 Service Area</h3>
+      <p><strong>Nagercoil & Kanyakumari District</strong></p>
+      <p class="soft">
+        Focused local operations ensure reliability, speed,
+        and personal service.
+      </p>
+    </div>
+    <div class="contact-card highlight">
+      <h3>🏢 Office Address</h3>
+      <p>
+        219, Rajakkamangalam Road,<br>
+        Punnai Nagar, Nagercoil – 629004
+      </p>
+      <p class="soft">
+        🕒 Mon–Sat | 10:00 AM – 6:00 PM
+      </p>
+    </div>
+  </div>
+  <p class="contact-footer-note">
+    Your feedback helps us grow stronger every day.
+    Thank you for being part of the Nest community 💚
+  </p>
+</section>
+<!-- end of body contact section -->
+<!-- start of footer section -->
+<div class="footer">
+    <!-- 1. Copyright -->
+    <p style="text-align: center; border-radius: 10px; padding: 10px; background-color: #f5f5f5; font-weight: bold;">© 2025 Nest Food Delivery. All rights reserved.</p>
+<!-- 2. Social Media Links -->
+<div class="social-links">
+    <a href="https://www.facebook.com/NESTTOURISMNAGERCOIL" target="_blank" class="link" title="Facebook">
+        <img src="https://i.pinimg.com/736x/42/75/49/427549f6f22470ff93ca714479d180c2.jpg" loading="lazy" class="icon" alt="Facebook" style="width: 30px; height: 30px;">
+    </a>
+    <a href="https://www.instagram.com/nest_tourism_s_s_rajiv/" target="_blank" class="link" title="Instagram">
+        <img src="https://png.pngtree.com/png-clipart/20180626/ourmid/pngtree-instagram-icon-instagram-logo-png-image_3584852.png" loading="lazy" class="icon" alt="Instagram" style="width: 30px; height: 30px;">
+    </a>
+    <a href="https://wa.me/9159158227" target="_blank" class="link" title="Chat on WhatsApp">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/029/204/552/small_2x/phone-icon-3d-rendering-png.png" loading="lazy" class="icon" alt="WhatsApp" style="width: 30px; height: 30px;">
+    </a>
+</div>
+<div class="dev">
+    <h5 class="devinfo">Developed & Designed By,🧑‍💻 J. Rosan John Redsin|📲 8754558543|📩 jrjr1405.player@gmail.com|🏠 Jafferkhanpet, Chennai-83</h5>
+</div>
         </div>
-</body>
-
+    </body>
 </html>

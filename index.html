@@ -60,7 +60,7 @@
         display: flex;
         align-items: center;
         padding: 60px;
-        background: url("./banner1.png") center/cover no-repeat;
+        background: url("./asserts/banner.png") center/cover no-repeat;
         position: relative;
     }
     .hero::after {
@@ -73,7 +73,7 @@
     .hero-content {
         position: relative;
         max-width: 700px;
-        color: goldenrod;
+        color: darkolivegreen;
     }
     .hero-content h1 {
         font-size: 3rem;
@@ -93,53 +93,67 @@
         font-weight: 600;
         cursor: pointer;
     }
-    .hero button:hover{
-            text-shadow: 2px 4px 4px black;
-            box-shadow: 3px 3px 6px 0px black;
+    .hero a{
+      background: linear-gradient(135deg, #ffb347,#4cbe00, #012f91);
+      border: none;
+      color: white;
+      padding: 14px 26px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      border-radius: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .hero button:hover, .hero a:hover{
+      text-shadow: 2px 4px 4px black;
+      box-shadow: 3px 3px 6px 0px black;
+    }
+    .hero-icons{
+      margin-top: 20px;
     }
     .hero-icons span {
-        font-size: 1.5rem;
-        margin: 0 10px;
+      font-size: 1.5rem;
+      margin: 0 10px;
     }
     .hero-stats span {
-        display: inline-block;
-        margin: 10px 15px;
-        font-weight: bold;
+      display: inline-block;
+      margin: 10px 15px;
+      font-weight: bold;
     }
     /* ---------- SECTIONS ---------- */
     section {
-        padding: 80px 60px;
+      padding: 80px 60px;
     }
     .section-title {
-        text-align: center;
-        font-size: 36px;
-        margin-bottom: 20px;
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
     }
     .section-sub {
-        text-align: center;
-        max-width: 600px;
-        margin: 0 auto 60px;
-        opacity: 0.7;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 60px;
+      opacity: 0.7;
     }
     /* ---------- SERVICES ---------- */
     .services {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
     }
     .service-card {
-        background: rgba(255,255,255,0.7);
-        backdrop-filter: blur(12px);
-        border-radius: 20px;
-        padding: 30px;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-        transition: transform 0.2s ease;
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
     }
     .service-card:hover {
-        transform: translateY(-6px);
+      transform: translateY(-6px);
     }
     .service-card h3 {
-        margin-bottom: 12px;
+      margin-bottom: 12px;
     }
     /* ---------- TRUST ---------- */
     .trust {
@@ -295,7 +309,7 @@
 <body>
 <header>
   <div style="display:flex;align-items:center;gap:10px">
-    <img src="./Logo.jpeg">
+    <img src="asserts/Logo.jpeg" loading="lazy">
     <strong>Nest Food Delivery</strong>
   </div>
   <nav>
@@ -314,7 +328,7 @@
     </p>
     <!-- CTA Buttons -->
     <div class="hero-cta">
-      <button class="btn-primary" onclick="scrollToServices()">Get Started</button>
+      <a class="btn-primary" href="helpapp.html">Get Started</a>
     </div>
     <!-- Optional: Service Icons for Visual Attraction -->
     <div class="hero-icons">
@@ -363,19 +377,20 @@
     <div>📍 Live Tracking</div>
   </div>
 </section>
-<footer>
-  © 2025 Nest Food Delivery. All rights reserved.
-</footer>
+<div class="footer">
+    <!-- 1. Copyright -->
+    <p style="text-align: center; border-radius: 10px; padding: 10px; background-color: #f5f5f5; font-weight: bold;">© 2025 Nest Food Delivery. All rights reserved.</p>
+</div>
 <!-- 2. Social Media Links -->
 <div class="social-links">
     <a href="https://www.facebook.com/NESTTOURISMNAGERCOIL" target="_blank" class="link" title="Facebook">
-        <img src="https://i.pinimg.com/736x/42/75/49/427549f6f22470ff93ca714479d180c2.jpg" class="icon" alt="Facebook" style="width: 30px; height: 30px;">
+        <img src="https://i.pinimg.com/736x/42/75/49/427549f6f22470ff93ca714479d180c2.jpg" class="icon" loading="lazy" alt="Facebook" style="width: 30px; height: 30px;">
     </a>
     <a href="https://www.instagram.com/nest_tourism_s_s_rajiv/" target="_blank" class="link" title="Instagram">
-        <img src="https://png.pngtree.com/png-clipart/20180626/ourmid/pngtree-instagram-icon-instagram-logo-png-image_3584852.png" class="icon" alt="Instagram" style="width: 30px; height: 30px;">
+        <img src="https://png.pngtree.com/png-clipart/20180626/ourmid/pngtree-instagram-icon-instagram-logo-png-image_3584852.png" loading="lazy" class="icon" alt="Instagram" style="width: 30px; height: 30px;">
     </a>
     <a href="https://wa.me/9159158227" target="_blank" class="link" title="Chat on WhatsApp">
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/029/204/552/small_2x/phone-icon-3d-rendering-png.png" class="icon" alt="WhatsApp" style="width: 30px; height: 30px;">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/029/204/552/small_2x/phone-icon-3d-rendering-png.png" loading="lazy" class="icon" alt="WhatsApp" style="width: 30px; height: 30px;">
     </a>
 </div>
 <div class="dev">
@@ -388,11 +403,6 @@
 </div>
 <button id="chat-toggle">💬</button>
 <script>
-  function scrollToServices() {
-    document.querySelector(".trust").scrollIntoView({
-      behavior: "smooth"
-    });
-  }
   // -------------------------------------------------- CHATBOT using JS -------------------------------------------------------------
 const chatbot = document.getElementById("chatbot");
 const toggle = document.getElementById("chat-toggle");
