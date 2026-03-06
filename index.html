@@ -178,6 +178,20 @@
         color: black;
         padding: 10px;
     }
+    /* -------------- Legal Links ----------- */
+    .footer-links{
+      text-align:center;
+      padding:10px;
+      font-weight:600;
+    }
+    .footer-links a{
+      text-decoration:none;
+      color:#03460c;
+      margin:0 10px;
+    }
+    .footer-links a:hover{
+      text-decoration:underline;
+    }
     /* ---------- SOCIAL MEDIA ---------- */
     .social-links {
         display: flex;
@@ -292,6 +306,11 @@
         padding: 10px;
         outline: none;
     }
+    #chat-body div{
+      margin-bottom:12px;
+      padding-bottom:8px;
+      border-bottom:1px solid #eee;
+    }
     /* ---------- MOBILE ---------- */
     @media (max-width: 768px) {
       .hero h1 {
@@ -378,6 +397,14 @@
   </div>
 </section>
 <div class="footer">
+    <!-- Legal Links -->
+    <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <span>|</span>
+        <a href="terms-conditions.html">Terms & Conditions</a>
+        <span>|</span>
+        <a href="delete-account.html">Delete Account</a>
+    </div>
     <!-- 1. Copyright -->
     <p style="text-align: center; border-radius: 10px; padding: 10px; background-color: #f5f5f5; font-weight: bold;">© 2025 Nest Food Delivery. All rights reserved.</p>
 </div>
@@ -424,13 +451,47 @@ function detectLanguage(text) {
 }
 function botTyping(callback) {
   const typing = document.createElement("div");
-  typing.innerHTML = "<em>Nest is typing...</em>";
+  typing.innerHTML = "<em>🤖 NestBot is typing...</em>";
   body.appendChild(typing);
   body.scrollTop = body.scrollHeight;
   setTimeout(() => {
     typing.remove();
     callback();
   }, 700);
+}
+function typeWriter(html) {
+  const container = document.createElement("div");
+  container.innerHTML = "<strong>NestBot:</strong> ";
+  body.appendChild(container);
+  const temp = document.createElement("div");
+  temp.innerHTML = html;
+  let nodes = Array.from(temp.childNodes);
+  let i = 0;
+  function typeNode() {
+    if (i >= nodes.length) return;
+    let node = nodes[i];
+    if (node.nodeType === Node.TEXT_NODE) {
+      let text = node.textContent;
+      let j = 0;
+      function typeChar() {
+        if (j < text.length) {
+          container.innerHTML += text.charAt(j);
+          j++;
+          body.scrollTop = body.scrollHeight;
+          setTimeout(typeChar, 15);
+        } else {
+          i++;
+          typeNode();
+        }
+      }
+      typeChar();
+    } else {
+      container.appendChild(node.cloneNode(true));
+      i++;
+      typeNode();
+    }
+  }
+  typeNode();
 }
 /* ------------------ KNOWLEDGE BASE ------------------ */
 const knowledgeBase = [
@@ -479,6 +540,293 @@ const knowledgeBase = [
         "🙏 நீங்கள் சேர விரும்பினால், எனக்குத் தெரியப்படுத்துங்கள் — நான் படி படியாக வழிகாட்டுவேன் 😊"
   },
   {
+    keywords: ["privacy","privacy policy","data privacy","user privacy","google play policy","play store policy"],
+    tamilKeywords: ["தனியுரிமை","பிரைவசி பாலிசி"],
+    answer:
+      "🔒 <b>Nest Food Delivery – Privacy Policy Summary</b><br><br>" +
+      "Our privacy policy explains how we collect, use, and protect your information.<br><br>" +
+      "<b>Sections:</b><br>" +
+      "• Information We Collect<br>" +
+      "• How We Use Your Information<br>" +
+      "• Location Information<br>" +
+      "• Data Security<br>" +
+      "• Sharing of Information<br>" +
+      "• User Account Deletion<br>" +
+      "• Children’s Privacy<br>" +
+      "• Changes to Policy<br>" +
+      "• Contact Information<br><br>" +
+      "You can ask about any section for more details 😊",
+    tamilAnswer:
+      "🔒 <b>Nest Food Delivery – தனியுரிமை கொள்கை சுருக்கம்</b><br><br>" +
+      "நாங்கள் உங்கள் தகவலை எப்படி சேகரிக்கிறோம் மற்றும் பாதுகாக்கிறோம் என்பதை விளக்குகிறது.<br><br>" +
+      "பகுதிகள்:<br>" +
+      "• சேகரிக்கும் தகவல்<br>" +
+      "• தகவல் பயன்பாடு<br>" +
+      "• இடம் தொடர்பான தகவல்<br>" +
+      "• தரவு பாதுகாப்பு<br>" +
+      "• தகவல் பகிர்வு<br>" +
+      "• கணக்கு நீக்கம்<br>" +
+      "• குழந்தைகள் தனியுரிமை<br>" +
+      "• கொள்கை மாற்றங்கள்<br>" +
+      "• தொடர்பு தகவல்"
+  },
+  {
+    keywords: ["information we collect","data we collect","what data do you collect"],
+    tamilKeywords: ["நீங்கள் என்ன தகவல் சேகரிக்கிறீர்கள்"],
+    answer:
+      "📊 <b>Information We Collect</b><br><br>" +
+      "Nest Food Delivery may collect the following information:<br>" +
+      "• Name<br>" +
+      "• Phone number<br>" +
+      "• Delivery location<br>" +
+      "• Device information<br>" +
+      "• Order and delivery details<br><br>" +
+      "This information helps us provide and improve our delivery services.",
+    tamilAnswer:
+      "📊 <b>சேகரிக்கும் தகவல்</b><br><br>" +
+      "Nest Food Delivery கீழ்க்கண்ட தகவல்களை சேகரிக்கலாம்:<br>" +
+      "• பெயர்<br>" +
+      "• தொலைபேசி எண்<br>" +
+      "• விநியோக இடம்<br>" +
+      "• சாதன தகவல்<br>" +
+      "• ஆர்டர் விவரங்கள்"
+  },
+  {
+    keywords: ["how we use information","how data used","use of information","data usage"],
+    tamilKeywords: ["தகவல் பயன்பாடு","தகவலை எப்படி பயன்படுத்துகிறீர்கள்"],
+    answer:
+      "⚙️ <b>How We Use Your Information</b><br><br>" +
+      "The information collected is used to:<br>" +
+      "• Process and manage delivery orders<br>" +
+      "• Connect users with riders and service providers<br>" +
+      "• Improve the performance of our applications<br>" +
+      "• Provide customer support and service updates<br>" +
+      "• Ensure safety, security, and fraud prevention<br><br>" +
+      "We only use your information for legitimate service purposes.",
+    tamilAnswer:
+      "⚙️ <b>தகவல் பயன்பாடு</b><br><br>" +
+      "சேகரிக்கப்பட்ட தகவல்கள் பயன்படுத்தப்படுவது:<br>" +
+      "• ஆர்டர்கள் மற்றும் விநியோகங்களை செயல்படுத்த<br>" +
+      "• பயனர் மற்றும் ரைடரை இணைக்க<br>" +
+      "• செயலியின் செயல்திறனை மேம்படுத்த<br>" +
+      "• வாடிக்கையாளர் ஆதரவு வழங்க"
+  },
+  {
+    keywords: ["location","location data","gps","tracking location"],
+    tamilKeywords: ["இடம் தகவல்","லொக்கேஷன்","ஜிபிஎஸ்"],
+    answer:
+      "📍 <b>Location Information</b><br><br>" +
+      "Nest Food Delivery uses location data to:<br>" +
+      "• Identify delivery pickup and drop locations<br>" +
+      "• Show nearby riders or service providers<br>" +
+      "• Enable real-time order tracking<br><br>" +
+      "Location access is only used during delivery operations and is not used for unrelated purposes.",
+    tamilAnswer:
+      "📍 <b>இடம் தொடர்பான தகவல்</b><br><br>" +
+      "லொக்கேஷன் தகவல் பயன்படுத்தப்படுவது:<br>" +
+      "• விநியோக இடங்களை கண்டறிய<br>" +
+      "• அருகிலுள்ள ரைடரை கண்டறிய<br>" +
+      "• நேரடி டிராக்கிங் வழங்க"
+  },
+  {
+    keywords: ["sharing information","data sharing","do you share data"],
+    tamilKeywords: ["தகவல் பகிர்வு","டேட்டா பகிர்வு"],
+    answer:
+      "🤝 <b>Sharing of Information</b><br><br>" +
+      "We do not sell or rent user data.<br><br>" +
+      "Information may only be shared when necessary with:<br>" +
+      "• Delivery riders for completing orders<br>" +
+      "• Hotel or service partners for order processing<br>" +
+      "• Legal authorities if required by law<br><br>" +
+      "All partners must follow strict privacy and security standards.",
+    tamilAnswer:
+      "🤝 <b>தகவல் பகிர்வு</b><br><br>" +
+      "பயனர் தகவல்கள் விற்பனை செய்யப்படாது.<br><br>" +
+      "தேவைப்படும் போது மட்டும் பகிரப்படும்:<br>" +
+      "• ரைடர்கள்<br>" +
+      "• ஹோட்டல் பங்குதாரர்கள்<br>" +
+      "• சட்ட அதிகாரிகள்"
+  },
+  {
+    keywords: ["policy changes","update policy","privacy update"],
+    tamilKeywords: ["கொள்கை மாற்றங்கள்"],
+    answer:
+      "🔄 <b>Changes to Privacy Policy</b><br><br>" +
+      "Nest Food Delivery may update this Privacy Policy when necessary.<br><br>" +
+      "Updates may occur due to:<br>" +
+      "• Legal or regulatory requirements<br>" +
+      "• Service improvements<br>" +
+      "• Security updates<br><br>" +
+      "Users will be notified through the app or website when important changes occur.",
+    tamilAnswer:
+      "🔄 <b>கொள்கை மாற்றங்கள்</b><br><br>" +
+      "தேவையான போது தனியுரிமை கொள்கை புதுப்பிக்கப்படும்.<br>" +
+      "முக்கிய மாற்றங்கள் ஏற்பட்டால் பயனர்களுக்கு அறிவிக்கப்படும்."
+  },
+  {
+    keywords: ["data security","security","how data protected"],
+    tamilKeywords: ["தரவு பாதுகாப்பு"],
+    answer:
+      "🔐 <b>Data Security</b><br><br>" +
+      "We implement appropriate security measures to protect your information.<br><br>" +
+      "• All data is transmitted using secure HTTPS encryption.<br>" +
+      "• Only authorized systems can access user data.<br>" +
+      "• We regularly review security practices to prevent unauthorized access.<br><br>" +
+      "However, no internet system can guarantee 100% security.",
+    tamilAnswer:
+      "🔐 <b>தரவு பாதுகாப்பு</b><br><br>" +
+      "உங்கள் தகவலை பாதுகாக்க பாதுகாப்பு நடவடிக்கைகள் பயன்படுத்தப்படுகின்றன.<br>" +
+      "• HTTPS குறியாக்கம் பயன்படுத்தப்படுகிறது.<br>" +
+      "• அனுமதி பெற்ற சேவைகள் மட்டுமே தரவை அணுக முடியும்."
+  },
+  {
+    keywords: ["children privacy","kids privacy","child policy"],
+    tamilKeywords: ["குழந்தைகள் தனியுரிமை"],
+    answer:
+      "👶 <b>Children’s Privacy</b><br><br>" +
+      "Nest Food Delivery apps are not intended for children under 15 years of age.<br><br>" +
+      "Our services involve delivery coordination and payment transactions,<br>" +
+      "so accounts should be managed by parents or responsible adults.",
+    tamilAnswer:
+      "👶 <b>குழந்தைகள் தனியுரிமை</b><br><br>" +
+      "15 வயதிற்குக் குறைந்த குழந்தைகள் தனியாக இந்த செயலியை பயன்படுத்த வேண்டாம்.<br>" +
+      "கணக்குகள் பெற்றோர் அல்லது பெரியவர்கள் மூலம் நிர்வகிக்கப்பட வேண்டும்."
+  },
+  {
+    keywords: ["terms","terms and conditions","terms policy","google play policy"],
+    tamilKeywords: ["விதிமுறைகள்","பயன்பாட்டு விதிமுறைகள்"],
+    answer:
+      "📜 <b>Nest Food Delivery – Terms & Conditions</b><br><br>" +
+      "These terms explain the rules for using our platform.<br><br>" +
+      "<b>Main Sections:</b><br>" +
+      "• User Responsibilities<br>" +
+      "• Orders & Deliveries<br>" +
+      "• Payments<br>" +
+      "• Service Availability<br>" +
+      "• Account Usage<br>" +
+      "• Limitation of Liability<br><br>" +
+      "Ask about any section if you want details 😊",
+    tamilAnswer:
+      "📜 <b>Nest Food Delivery – பயன்பாட்டு விதிமுறைகள்</b><br><br>" +
+      "இந்த விதிமுறைகள் எங்கள் செயலியை பயன்படுத்தும் விதிகளை விளக்குகிறது.<br><br>" +
+      "<b>முக்கிய பகுதிகள்:</b><br>" +
+      "• பயனர் பொறுப்புகள்<br>" +
+      "• ஆர்டர் & விநியோகம்<br>" +
+      "• கட்டணங்கள்<br>" +
+      "• சேவை கிடைப்பது<br>" +
+      "• கணக்கு பயன்பாடு<br>" +
+      "• பொறுப்பு வரம்புகள்<br><br>" +
+      "இந்த பகுதிகளில் ஏதேனும் பற்றி கேட்கலாம் 😊"
+  },
+  {
+    keywords: ["user responsibilities","user rules","user responsibility"],
+    tamilKeywords: ["பயனர் பொறுப்புகள்"],
+    answer:
+      "👤 <b>User Responsibilities</b><br><br>" +
+      "Users must provide accurate information while using the platform.<br>" +
+      "Users should not misuse the application or attempt fraudulent activities.<br>" +
+      "Users are responsible for maintaining the confidentiality of their account details.",
+    tamilAnswer:
+      "👤 <b>பயனர் பொறுப்புகள்</b><br><br>" +
+      "பயனர்கள் சரியான தகவல்களை வழங்க வேண்டும்.<br>" +
+      "செயலியை தவறாக பயன்படுத்தக்கூடாது.<br>" +
+      "தங்களது கணக்கு தகவல்களை பாதுகாப்பாக வைத்திருக்க வேண்டும்."
+  },
+  {
+    keywords: ["orders deliveries","delivery rules","order policy"],
+    tamilKeywords: ["ஆர்டர்","விநியோகம்"],
+    answer:
+      "🚚 <b>Orders & Deliveries</b><br><br>" +
+      "Nest Food Delivery connects users with riders and food partners.<br>" +
+      "Delivery times may vary depending on distance, traffic, and restaurant preparation time.<br>" +
+      "Users must ensure accurate pickup and drop location details.",
+    tamilAnswer:
+      "🚚 <b>ஆர்டர் & விநியோகம்</b><br><br>" +
+      "Nest Food Delivery பயனர்களை ரைடர்கள் மற்றும் ஹோட்டல்களுடன் இணைக்கிறது.<br>" +
+      "விநியோக நேரம் தூரம் மற்றும் போக்குவரத்து நிலையைப் பொறுத்தது.<br>" +
+      "பயனர் சரியான முகவரியை வழங்க வேண்டும்."
+  },
+  {
+    keywords: ["payments","payment policy","payment rules"],
+    tamilKeywords: ["கட்டணம்","பணம் செலுத்துதல்"],
+    answer:
+      "💳 <b>Payments</b><br><br>" +
+      "Payments may be made through supported payment methods available in the app.<br>" +
+      "All payment transactions are processed securely through payment gateways.<br>" +
+      "Users must ensure sufficient balance before placing an order.",
+    tamilAnswer:
+      "💳 <b>கட்டணங்கள்</b><br><br>" +
+      "செயலியில் வழங்கப்படும் கட்டண முறைகள் மூலம் பணம் செலுத்தலாம்.<br>" +
+      "அனைத்து பரிவர்த்தனைகளும் பாதுகாப்பான payment gateway மூலம் செயல்படும்.<br>" +
+      "ஆர்டர் செய்வதற்கு முன் போதுமான பணம் இருப்பதை உறுதி செய்ய வேண்டும்."
+  },
+  {
+    keywords: ["service availability","service hours","service area"],
+    tamilKeywords: ["சேவை கிடைப்பது"],
+    answer:
+      "📍 <b>Service Availability</b><br><br>" +
+      "Nest Food Delivery services are available only in supported locations.<br>" +
+      "Service hours and availability may vary depending on operational conditions.",
+    tamilAnswer:
+      "📍 <b>சேவை கிடைப்பது</b><br><br>" +
+      "Nest Food Delivery சேவைகள் குறிப்பிட்ட பகுதிகளில் மட்டுமே கிடைக்கும்.<br>" +
+      "சேவை நேரம் மற்றும் கிடைப்பது சூழ்நிலையைப் பொறுத்து மாறலாம்."
+  },
+  {
+    keywords: ["account usage","account rules"],
+    tamilKeywords: ["கணக்கு பயன்பாடு"],
+    answer:
+      "🔐 <b>Account Usage</b><br><br>" +
+      "Users must not share their account credentials with others.<br>" +
+      "Any activity performed using the account will be considered the responsibility of the account owner.",
+    tamilAnswer:
+      "🔐 <b>கணக்கு பயன்பாடு</b><br><br>" +
+      "பயனர்கள் தங்களது கணக்கு தகவல்களை மற்றவர்களுடன் பகிரக்கூடாது.<br>" +
+      "கணக்கில் நடக்கும் அனைத்து செயல்களுக்கும் கணக்கு உரிமையாளர் பொறுப்பாக இருப்பார்."
+  },
+  {
+    keywords: ["limitation of liability","liability"],
+    tamilKeywords: ["பொறுப்பு வரம்பு"],
+    answer:
+      "⚖️ <b>Limitation of Liability</b><br><br>" +
+      "Nest Food Delivery acts as a platform connecting users, riders, and service providers.<br>" +
+      "We are not responsible for delays caused by external factors such as traffic, weather, or restaurant preparation delays.",
+    tamilAnswer:
+      "⚖️ <b>பொறுப்பு வரம்பு</b><br><br>" +
+      "Nest Food Delivery பயனர்கள், ரைடர்கள் மற்றும் சேவை வழங்குநர்களை இணைக்கும் ஒரு தளம் மட்டுமே.<br>" +
+      "போக்குவரத்து, வானிலை அல்லது ஹோட்டல் தாமதம் போன்ற வெளிப்புற காரணங்களுக்காக நாங்கள் பொறுப்பல்ல."
+  },
+  {
+    keywords: ["delete account","remove account","account deletion"],
+    tamilKeywords: ["கணக்கு நீக்கம்"],
+    answer:
+      "🗑 <b>Account Deletion</b><br><br>" +
+      "Users can request deletion of their account and associated data.<br><br>" +
+      "To submit a deletion request, please visit:<br>" +
+      "<a href='https://nestfooddelivery.org/delete-account' target='_blank'>Delete Account Page</a><br><br>" +
+      "Once verified, the account and associated data will be removed from our systems.",
+    tamilAnswer:
+      "🗑 <b>கணக்கு நீக்கம்</b><br><br>" +
+      "உங்கள் கணக்கை நீக்க விரும்பினால், கீழே உள்ள இணைப்பைப் பயன்படுத்தலாம்:<br>" +
+      "<a href='https://nestfooddelivery.org/delete-account' target='_blank'>கணக்கு நீக்கம்</a>"
+  },
+  {
+    keywords: ["contact information","privacy contact","support contact"],
+    tamilKeywords: ["தொடர்பு தகவல்"],
+    answer:
+      "📞 <b>Contact Information</b><br><br>" +
+      "If you have any questions about our Privacy Policy or services, you can contact us:<br><br>" +
+      "📱 Phone / WhatsApp: 9159158227<br>" +
+      "📧 Email: nestfooddelivery@gmail.com<br>" +
+      "🌐 Website: nestfooddelivery.org",
+    tamilAnswer:
+      "📞 <b>தொடர்பு தகவல்</b><br><br>" +
+      "எங்கள் சேவைகள் அல்லது தனியுரிமை கொள்கை பற்றி கேள்விகள் இருந்தால் தொடர்பு கொள்ளலாம்:<br><br>" +
+      "📱 Phone / WhatsApp: 9159158227<br>" +
+      "📧 Email: nestfooddelivery@gmail.com" +
+      "🌐 Website: nestfooddelivery.org",
+  },
+  {
     keywords: ["price","cost","charges","fees"],
     tamilKeywords: ["விலை","செலவு","கட்டணங்கள்","கட்டணம்"],
     answer: "💰 Pricing depends on distance and service type. We keep it affordable.",
@@ -524,21 +872,23 @@ input.addEventListener("keypress", function (e) {
     if (expectingName) {
         userName = userText;
         expectingName = false;
-        body.innerHTML += `
+        typeWriter(`😊 Nice to meet you, <b>${userName}</b>!`);
+        /* body.innerHTML += `
             <div><strong>NestBot:</strong>
             😊 Nice to meet you, <b>${userName}</b>!
-            </div>`;
+            </div>`; */
         body.scrollTop = body.scrollHeight;
         return;
         }
     if (!askedName && ( msg.includes("hello") || msg.includes("hi") || msg.includes("good") )) {
     askedName = true;
     expectingName = true;
-    body.innerHTML += `
+    typeWriter(`😊 Welcome to Nest Food Delivery! <br>If you’d like, may I know your name?`);
+    /* body.innerHTML += `
         <div><strong>NestBot:</strong>
         😊 Welcome to Nest Food Delivery!  
         <br>If you’d like, may I know your name?
-        </div>`;
+        </div>`; */
     body.scrollTop = body.scrollHeight;
     return;
     }
@@ -547,35 +897,39 @@ input.addEventListener("keypress", function (e) {
       const phone = userText.replace(/\D/g, "");
       expectingPhone = false;
       if (phone.length < 10) {
-        body.innerHTML += `
+        typeWriter(`😊 No worries! You can continue chatting without sharing your number.`);
+        /* body.innerHTML += `
           <div><strong>NestBot:</strong>
           😊 No worries! You can continue chatting without sharing your number.
-          </div>`;
+          </div>`; */
         body.scrollTop = body.scrollHeight;
         return;
       }
       userPhone = phone;
-      body.innerHTML += `
+      typeWriter(`🙏 Thank you${userName ? " " + userName : ""}! <br>Our team will contact you shortly. <br><br> <a href="https://wa.me/91${userPhone}" target="_blank">📲 Chat on WhatsApp</a>`);
+      /* body.innerHTML += `
         <div><strong>NestBot:</strong>
         🙏 Thank you${userName ? " " + userName : ""}!  
         <br>Our team will contact you shortly.
         <br><br>
         <a href="https://wa.me/91${userPhone}" target="_blank">📲 Chat on WhatsApp</a>
-        </div>`;
+        </div>`; */
       body.scrollTop = body.scrollHeight;
       return;
     }
     /* 4️⃣ Normal chatbot reply (ALWAYS) */
     const reply = getBotReply(msg, lang);
-    body.innerHTML += `<div><strong>NestBot:</strong> ${reply}</div>`;
+    // body.innerHTML += `<div><strong>NestBot:</strong> ${reply}</div>`;
+    typeWriter(reply);
     /* 5️⃣ Ask PHONE only for sensitive keywords */
     const phoneTriggers = ["price","pricing","cost","charges","payment","technical","integration","contact","call","whatsapp"];
     if (!expectingPhone && phoneTriggers.some(k => msg.includes(k))) {
       expectingPhone = true;
-      body.innerHTML += `
+      typeWriter(`📞 For accurate details, may I have your WhatsApp number?`);
+      /* body.innerHTML += `
         <div><strong>NestBot:</strong>
         📞 For accurate details, may I have your WhatsApp number?
-        </div>`;
+        </div>`; */
     }
     body.scrollTop = body.scrollHeight;
   });
